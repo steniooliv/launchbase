@@ -4,7 +4,7 @@
 
 console.log("Calculo de aposentadoria:")
 
-const nome2 = "Stenio";
+const nome = "Stenio";
 const sexo = "M";
 const idade = 29;
 const contribuicao = 13;
