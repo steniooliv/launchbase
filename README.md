@@ -20,5 +20,10 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
     - Calculo IMC - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-1/imc.js)
     - Calculo Aposentadoria - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-1/aposentadoria.js)
 
+- Desafio 1-2 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-01/blob/master/desafios/01-2-lidando-com-objetos-e-vetores.md)
+    - Armazenar Dados Empresa - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-2/empresa.js)
+    - Armazenar Dados Programador - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-2/programador.js)
+
+
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
