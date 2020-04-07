@@ -8,7 +8,7 @@
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%23F8952D">
   </a>
 
-  <a href="LICENSE" >
+  <a href="https://www.linkedin.com/in/steniooliv/" >
     <img alt="Stenio" src="https://img.shields.io/badge/steniooliv-in-%230072b1">
   </a>
 
