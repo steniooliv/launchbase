@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="400px" />
+    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="200px" />
 </h1>
 
 <p align="center">
@@ -16,7 +16,7 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 
 ### :calendar: Semana 01
 - Revisões e dúvidas - [Notion](https://www.notion.so/Segunda-b0bb93458edd4d56b0055cfc54e6483f)
-- Desafio 1-1 - [Link](https://github.com/steniooliv/launchbase)
+- Desafio 1-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-01/blob/master/desafios/01-1-primeiros-passos-com-js.md) - [Resolução](https://github.com/steniooliv/launchbase)
 
 
 ### Update
