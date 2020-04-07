@@ -16,8 +16,9 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 
 ### :calendar: Semana 01
 - Revisões e dúvidas - [Notion](https://www.notion.so/Segunda-b0bb93458edd4d56b0055cfc54e6483f)
-- Desafio 1-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-01/blob/master/desafios/01-1-primeiros-passos-com-js.md) - [Resolução](https://github.com/steniooliv/launchbase/blob/master/desafio-1-1.js)
-
+- Desafio 1-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-01/blob/master/desafios/01-1-primeiros-passos-com-js.md)
+    - Calculo IMC - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-1/imc.js)
+    - Calculo Aposentadoria - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-1/aposentadoria.js)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
