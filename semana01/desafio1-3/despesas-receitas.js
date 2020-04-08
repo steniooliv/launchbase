@@ -43,7 +43,7 @@ function somaNumeros(numeros) {
 for (let i = 0; i < usuarios.length; i++) {
   let saldo = calculaSaldo(usuarios[i].receitas, usuarios[i].despesas);
   
-  if (saldo > 0) {
+  if (saldo >= 0) {
 
     console.log(`${usuarios[i].nome}, possui saldo POSITIVO de ${saldo.toFixed(1)}`);
 
@@ -51,6 +51,6 @@ for (let i = 0; i < usuarios.length; i++) {
   else {
 
     console.log(`${usuarios[i].nome}, possui saldo NEGATIVO de ${saldo.toFixed(1)}`);
-    
+
   }
 }
