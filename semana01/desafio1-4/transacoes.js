@@ -7,7 +7,6 @@ const user = {
   name: "Mariana",
   transactions: [],
   balance: 0,
-
 }
 
 function createTransaction(transaction) {
@@ -15,16 +14,13 @@ function createTransaction(transaction) {
   if (transaction.type == "credit"){
 
     user.balance = user.balance + transaction.value;
-
   }
   else {
 
     user.balance = user.balance - transaction.value;
-
   }
 
   user.transactions.push(transaction);
-
 }
 
 
@@ -40,11 +36,9 @@ function getHigherTransactionByType(type) {
       higherValue = transaction.value;
       higherTransaction = transaction;
     }
-
   }
   
   return higherTransaction;
-
 }
 
 function getAverageTransactionValue() {
@@ -54,11 +48,9 @@ function getAverageTransactionValue() {
   for (transaction of user.transactions) {
 
     sum = sum + transaction.value;
-
   }
 
   return sum / user.transactions.length;
-
 }
 
 function getTransactionsCount() {
@@ -69,18 +61,14 @@ function getTransactionsCount() {
     if (transaction.type == "credit") {
 
       count.credit++;
-
     }
     else {
 
       count.debit++;
-
     }
-    
   }
   
   return count;
-
 }
 
 
