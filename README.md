@@ -33,6 +33,8 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
     - Buscar Tecnologias - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-3/tecnologia.js)
     - Receitas e Despesas - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-3/despesas-receitas.js)
 
+- Desafio 1-4 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-01/blob/master/desafios/01-4-aplicacao-operacoes-bancarias.md)
+    - Transações Bancárias - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/desafio1-4/transacoes.js)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
