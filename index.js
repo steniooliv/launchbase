@@ -1,8 +1,8 @@
 // Criar um programa que calcula a média
-// das notas entre os alunos e envia
+// das turmas de alunos e envia
 // mensagem do calculo da média.
 
-const alunos = [
+const alunosTurmaA = [
   {
     nome: "Stenio",
     nota: 9.8,
@@ -17,18 +17,60 @@ const alunos = [
     nome: "Igor",
     nota: 2,
   },
+  {
+    nome: "Thiago",
+    nota: 10,
+  }
 ]
 
-const nomesDeAlunos = ["Stenio", "Marcos", "Igor"]
+const alunosTurmaB = [
+  {
+    nome: "Mateus",
+    nota: 7.5,
+  },
 
-const media = (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3;
+  {
+    nome: "Isadora",
+    nota: 7,
+  },
 
-//Se a média for maior que 5, parabenizar a turma
-if (media > 5) {
+  {
+    nome: "Lucas",
+    nota: 4,
+  },
+
+  {
+    nome: "Novo Aluno",
+    nota: 5,
+  }
+]
+
+function calculaMedia(alunos) {
+
+  let soma = 0;
   
-  console.log(`A média foi de ${media}. Parabéns!`)
+  for (let i = 0; i < alunos.length; i++) {
+    soma = soma + alunos[i].nota;
+  }
+
+  const media = soma / alunos.length;
+  return media;
 }
-else {
+
+const media1 = calculaMedia(alunosTurmaA);
+const media2 = calculaMedia(alunosTurmaB);
+
+function enviaMensagem(media, turma) {
+  //Se a média for maior que 5, parabenizar a turma
+  if (media > 5) {
   
-  console.log(`A média é menor que 5.`)
+    console.log(`A média da ${turma} foi de ${media}. Parabéns!`)
+  }
+  else {
+    
+    console.log(`A média da ${turma} é menor que 5.`)
+  }
 }
+
+enviaMensagem(media1, "Turma A");
+enviaMensagem(media2, "Turma B");
