@@ -1,111 +1,113 @@
-// Criar um programa que calcula a média
-// das turmas de alunos e envia
-// mensagem do calculo da média.
-
-const alunosTurmaA = [
+const classA = [
   {
-    nome: "Stenio",
-    nota: 9.8,
+    name: "Stenio",
+    grade: 9.8,
   },
 
   {
-    nome: "Marcos",
-    nota: 10,
+    name: "Marcos",
+    grade: 10,
   },
 
   {
-    nome: "Igor",
-    nota: 2,
+    name: "Igor",
+    grade: 2,
+
   },
   {
-    nome: "Thiago",
-    nota: 10,
-  }
+    name: "Thiago",
+    grade: 10,
+  },
 ]
 
-const alunosTurmaB = [
+const classB = [
   {
-    nome: "Mateus",
-    nota: 7.5,
+    name: "Mateus",
+    grade: 7.5,
   },
 
   {
-    nome: "Isadora",
-    nota: 7,
+    name: "Isadora",
+    grade: 7,
   },
 
   {
-    nome: "Lucas",
-    nota: 4,
+    name: "Lucas",
+    grade: 4,
   },
 
   {
-    nome: "Novo Aluno",
-    nota: 5,
-  }
+    name: "Novo Aluno",
+    grade: 5,
+  },
 ]
 
-function calculaMedia(alunos) {
+function calculateAverage(students) {
+  let sum = 0;
 
-  let soma = 0;
-  
-  for (let i = 0; i < alunos.length; i++) {
-    soma = soma + alunos[i].nota;
+  for (let i = 0; i < students.length; i++) {
+
+    sum = sum + students[i].grade;
+
   }
 
-  const media = soma / alunos.length;
-  return media;
+  const average = sum / students.length;
+
+  return average;
 }
 
-const media1 = calculaMedia(alunosTurmaA);
-const media2 = calculaMedia(alunosTurmaB);
 
-function enviaMensagem(media, turma) {
-  //Se a média for maior que 5, parabenizar a turma
-  if (media > 5) {
-  
-    console.log(`A média da ${turma} foi de ${media}. Parabéns!`)
+function sendMessage(average, classroom) {
+  if (average > 5) {
+
+    console.log(`${classroom} average: ${average}. Congratulations!`);
+
   }
   else {
-    
-    console.log(`A média da ${turma} é menor que 5.`)
-  }
-}
 
-enviaMensagem(media1, "Turma A");
-enviaMensagem(media2, "Turma B");
-
-
-// Marcar aluno como reprovado se anota
-// for menor que 5
-// e enviar uma mensagem
-
-
-
-function marcarComoReprovado(aluno) {
-  aluno.reprovado = false;
-
-  if (aluno.nota < 5) {
-    aluno.reprovado = true;
-  }
-
-}
-
-function enviarMensagemReprovado(aluno) {
-
-  if (aluno.reprovado) {
-    console.log(`O aluno ${aluno.nome} está reprovado.`)
-  }
-}
-
-function alunoReprovado(alunos) {
-  for (let aluno of alunos) {
-
-    marcarComoReprovado(aluno);
-    enviarMensagemReprovado(aluno);
+    console.log(`${classroom} average: ${average}. It´s not good!`);
 
   }
 }
 
-alunoReprovado(alunosTurmaA);
-alunoReprovado(alunosTurmaB);
+
+function setFlunked(student) {
+  student.flunked = false;
+
+  if (student.grade < 5) {
+
+    student.flunked = true;
+
+  }
+
+}
+
+
+function sendFlunkedMessage(student) {
+
+  if (student.flunked) {
+
+    console.log(`${student.name} is flunked.`);
+
+  }
+}
+
+
+function studentsReprovados(students) {
+  for (let student of students) {
+
+    setFlunked(student);
+    sendFlunkedMessage(student);
+
+  }
+}
+
+
+const average1 = calculateAverage(classA);
+const average2 = calculateAverage(classB);
+
+sendMessage(average1, "Class A");
+sendMessage(average2, "Class B");
+
+studentsReprovados(classA);
+studentsReprovados(classB);
