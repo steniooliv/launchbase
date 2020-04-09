@@ -42,7 +42,7 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 ### Iniciando no Front-end - [Path](https://github.com/steniooliv/launchbase/tree/master/semana01/frontend)
 
 - Desafio 2-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-1-primeiro-html.md)
-    - Adicionar Favicon e Estilizar - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/frontend/index.html)
+    - Adicionar Favicon e Estilizar - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/frontend/desafio2-1.html)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
