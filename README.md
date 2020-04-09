@@ -18,8 +18,11 @@
 O repositório está separado por semana, dentro de cada semana tem os arquivos criados com aprendizagem e o(s) desafios concluídos.
 Abaixo também tem um link para um resumo de todo o contéudo abordado para revisões e dúvidas.
 
-### :calendar: Semana 01
+## :calendar: Semana 01
 - Revisões e dúvidas - [Notion](https://www.notion.so/Segunda-b0bb93458edd4d56b0055cfc54e6483f)
+
+### Introdução ao desenvolvimento web - [Path](https://github.com/steniooliv/launchbase/tree/master/semana01/intro)
+
 - Desafio 1-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-01/blob/master/desafios/01-1-primeiros-passos-com-js.md)
     - Calculo IMC - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/intro/desafio1-1/imc.js)
     - Calculo Aposentadoria - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01//intro/desafio1-1/aposentadoria.js)
@@ -35,6 +38,11 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 
 - Desafio 1-4 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-01/blob/master/desafios/01-4-aplicacao-operacoes-bancarias.md)
     - Transações Bancárias - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/intro/desafio1-4/transacoes.js)
+
+### Iniciando no Front-end - [Path](https://github.com/steniooliv/launchbase/tree/master/semana01/frontend)
+
+- Desafio 2-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-1-primeiro-html.md)
+    - Adicionar Favicon e Estilizar - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/frontend/index.html)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
