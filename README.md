@@ -43,6 +43,7 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 
 - Desafio 2-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-1-primeiro-html.md)
     - Adicionar Favicon e Estilizar - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/frontend/desafio2-1/desafio2-1.html)
+
 - Desafio 2-2 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-2-pagina-descricao.md)
     - Criar página sobre Rocketseat - [Resolução](https://github.com/steniooliv/launchbase/blob/master/semana01/frontend/desafio2-2/desafio2-2.html)
 
