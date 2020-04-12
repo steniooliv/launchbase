@@ -78,3 +78,42 @@ header {
 #footer a {
   border-bottom: 1px solid #50fa7b;
 }
+
+/* CARDS */
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+}
+
+.card {
+  background-color: #7159c1;
+
+}
+
+.card_image-container img {
+  width: 100%;
+
+}
+
+.card_content,
+.card_info {
+  padding: 24px;
+}
+
+.card_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card_price {
+  background-color: #7159c1;
+  filter: brightness(90%);
+  border-radius: 6px;
+  text-align: center;
+  padding: 5px;
+}
