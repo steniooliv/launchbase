@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Desafio 2-3</title>
+    
+    <link rel="icon" href="https://blog.rocketseat.com.br/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;                            /* obrigatorio */
+      }
+
+      body {
+        background: #110122;                /* obrigatorio */
+        font-family: 'Roboto', sans-serif;    /* obrigatorio */
+      }
+
+      header {
+        text-align: center;
+        padding: 30px;                        /* obrigatorio */
+        background-color: rgba(0,0,0,0.1);
+        border-bottom: 1px solid #070114;
+      }
+
+      header div a {
+        color: #fff;
+        font-size: 18px;
+        line-height: 28px;
+        text-decoration: none;
+        padding: 0 30px;                      /* obrigatorio */
+      }
+
+      header div a:hover {
+        color: #7159C1;
+        transition: 400ms;
+      }
+
+      .wrapper {
+        text-align: center;
+        padding: 32px;
+
+      }
+
+      .wrapper h1 {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 46px;
+        color:#fff;
+        
+      }
+
+      .cards {
+        max-width: 800px;
+        padding: 32px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        margin: 0 auto;
+      }
+
+      .card {
+        border: 3px solid #7159C1;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .card img {
+        max-height: 130px;
+        padding: 12px;
+
+      }
+
+      .description {
+        font-size: 18px;
+        line-height: 28px;
+        color: #fff;
+        background-color: #7159C1;
+        border: 4px solid #7159C1;
+        padding: 8px;
+      }
+
+      .info {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .price {
+        background-color: #7159C1;
+        filter: brightness(90%);
+        border-radius: 8px;
+      }
+
+      .modal-overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:0;
+        background-color: rgba(0,0,0,0.6);
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal {
+        width: 90%;
+        height: 90%;
+        background-color: #fff;
+        margin: 5vh auto;
+        position: relative;
+      }
+
+      .close {
+        height: 25px;
+        position: absolute;
+        right: -10px;
+        top: -15px;
+        color: #7159C1;
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      iframe {
+        width: 100%;
+        height: 95%;
+        position: absolute;
+        top: 20px;        
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="menu">
+        <a href="./">Sobre</a>
+        <a href="./desafio2-3.html">Conteúdos</a>
+      </div>
+    </header>
+
+    
+    <div class="wrapper">
+      <h1>Conteúdos</h1>
+
+      <section class="cards">
+
+        <div class="card" id="starter">
+          <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="Starter">
+          <div class="description">
+            <p>Cursos 100% online e gratuitos para você entrar com o pé direito nas tecnologias mais desejadas do mercado.</p>
+            <div class="info">
+              <p>2 Modulos</p>
+              <p class="price">Gratuito</p>
+            </div>
+          </div> 
+        </div>
+
+        <div class="card" id="launchbase">
+          <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="LaunchBase">
+          <div class="description">
+            <p>Domine programação do zero e tenha acesso às melhores oportunidades do mercado no menor tempo possível.</p>
+            <div class="info">
+              <p>6 Modulos</p>
+              <p class="price">Pago</p>
+            </div>
+          </div> 
+        </div>
+
+        <div class="card" id="gostack">
+          <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="GoStack">
+          <div class="description">
+            <p>Treinamento imersivo nas tecnologias mais modernas de desenvolvimento web e mobile para quem não tem tempo a perder.</p>
+            <div class="info">
+              <p>6 Modulos</p>
+              <p class="price">Pago</p>
+            </div>
+          </div> 
+        </div>
+
+      </section> <!-- cards -->
+
+    </div> <!--wrapper-->
+    
+    <div class="modal-overlay ">
+      <div class="modal">
+        <a class="close">
+          <i class="material-icons">highlight_off</i>
+        </a>
+
+        <div class="modal-content">
+          <iframe src="https://rocketseat.com.br/gostack" frameborder="0"></iframe>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script>
+
+      const modalOverlay = document.querySelector(".modal-overlay");
+      const cards = document.querySelectorAll(".card");
+      const close = document.querySelector(".close");
+
+      for (let card of cards){
+        const pageId = card.getAttribute("id");
+        card.addEventListener("click", function(){
+          modalOverlay.classList.add("active");
+          modalOverlay.querySelector("iframe").src = `https://rocketseat.com.br/${pageId}`;
+
+        })
+      }
+
+      close.addEventListener("click", function(){
+        modalOverlay.classList.remove("active");
+        modalOverlay.querySelector("iframe").src = "";
+      })
+
+
+    </script>
+
+    </body>
+  </html>
