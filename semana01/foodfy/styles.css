@@ -12,7 +12,12 @@
   background-color: #fff;
   max-width: 940px;
   margin: 0 auto;
+}
 
+.link-logo {
+  margin:0;
+  padding: 0;
+  border: 0;
 }
 
 header {
@@ -140,4 +145,87 @@ footer p {
   line-height: 16px;
   color: #999999;
   text-align: center;
+}
+
+/* ABOUT */
+
+.about h1 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #111111;
+  margin-top: 20px;
+}
+
+.about h2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #111111;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #444444;
+  padding: 20px 0;
+  text-align: justify;
+}
+
+/* RECIPES */
+
+.recipes {
+  padding: 20px 0;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+
+}
+
+.modal {
+  width: 660px;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+.modal img {
+  width: 600px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #111111;
+  margin-bottom: 5px;
+}
+
+.modal-chef {
+  font-size: 18px;
+  line-height: 21px;
+  color: #777777;
+  margin-bottom: 60px;
+}
+
+.modal-close {
+  font-size: 16px;
+  line-height: 19px;
+  color: #999999;
+  cursor: pointer;
 }
