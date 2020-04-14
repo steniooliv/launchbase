@@ -188,7 +188,13 @@ footer p {
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
 
+.modal-overlay .active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
