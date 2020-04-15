@@ -52,7 +52,7 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 
 ### Foodfy - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md)
 
-    - Criar página principal com banner e receitas mais acessadas, criar página sobre a empresa e uma página de receitas com modal - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/foodfy)
+- Criar página principal com banner e receitas mais acessadas, criar página sobre a empresa e uma página de receitas com modal - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/foodfy)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
