@@ -1,0 +1,67 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Cursos</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+  <h1>Cursos</h1>
+
+  <section class="cards">
+
+    <div class="card" id="starter">
+      <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="Starter">
+      <div class="description">
+        <p>Cursos 100% online e gratuitos para você entrar com o pé direito nas tecnologias mais desejadas do mercado.<br><br></p>
+        <div class="info">
+          <p>2 Modulos</p>
+          <p class="price">Gratuito</p>
+        </div>
+      </div> 
+    </div>
+
+    <div class="card" id="launchbase">
+      <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="LaunchBase">
+      <div class="description">
+        <p>Domine programação do zero e tenha acesso às melhores oportunidades do mercado no menor tempo possível.<br><br></p>
+        <div class="info">
+          <p>6 Modulos</p>
+          <p class="price">Pago</p>
+        </div>
+      </div> 
+    </div>
+
+    <div class="card" id="gostack">
+      <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="GoStack">
+      <div class="description">
+        <p>Treinamento imersivo nas tecnologias mais modernas de desenvolvimento web e mobile para quem não tem tempo a perder.</p>
+        <div class="info">
+          <p>6 Modulos</p>
+          <p class="price">Pago</p>
+        </div>
+      </div> 
+    </div>
+
+  </section> <!-- cards -->
+
+</div> <!--wrapper-->
+
+<div class="modal-overlay ">
+  <div class="modal">
+    <a class="buttons">
+      <i class="material-icons maxi">maximize</i>
+      <i class="material-icons close">close</i>
+    </a>
+
+    <div class="modal-content">
+      <iframe src="https://rocketseat.com.br/gostack" frameborder="0"></iframe>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="./scripts.js"></script>
+{% endblock %}

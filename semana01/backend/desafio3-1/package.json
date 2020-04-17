@@ -4,8 +4,14 @@
   "description": "Desafio 3-1 LaunchBase",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
-  
-  "author": "Stenio Oliveira"
+  "author": "Stenio Oliveira",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  }
 }
