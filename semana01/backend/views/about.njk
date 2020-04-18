@@ -11,16 +11,20 @@
 {% block content %}
 
   <div id="wrapper">
-    <img src="https://avatars0.githubusercontent.com/u/21336806?s=460&u=e62c6c92cd990a15a2c46213bf6868f58401b685&v=4" alt="Stenio Oliveira">
-    <h1>Stenio Oliveira</h1>
-    <h2>Aluno Desenvolvedor WEB</h2>
-    <p>Aluno de programção full-stack, focado em conhecer o melhor ensino para iniciantes em programação. Aluno da <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a></p> 
+
+    <img src="{{ about.avatar_url }}" alt="Imagem de {{ about.name }}">
+    <h1>{{ about.name }}</h1>
+    <h2>{{ about.role }}</h2>
+    <p>{{ about.description }}</p> 
+  
   </div>
 
   <div id="footer" class="links">
-    <a href="https://www.github.com/steniooliv" target="_blank">Github</a>
-    <a href="https://www.twitter.com/steniooliv" target="_blank">Twitter</a>
-    <a href="https://www.linkedin.com/in/steniooliv" target="_blank">Linkedin</a>
+
+    {% for link in about.links %}
+      <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+    {% endfor %}
+
   </div>
 
 {% endblock %}
