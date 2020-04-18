@@ -1,6 +1,7 @@
 //imports express and ninjucks
 const express = require("express");
 const nunjucks = require("nunjucks");
+const courses = require("./data");
 
 //start express on const server
 const server = express();
@@ -20,12 +21,14 @@ server.set("view engine", "njk");
 //config nunjucks path
 nunjucks.configure("views", {
   express: server,
+  autoescape: false,
+  noCache: true,
 })
 
 
 //routes
 server.get("/", function(req, res) {
-  return res.render("courses");
+  return res.render("courses", {courses});
 })
 
 server.get("/about", function(req, res) {

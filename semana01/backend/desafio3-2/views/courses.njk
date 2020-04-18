@@ -11,38 +11,24 @@
 
   <section class="cards">
 
-    <div class="card" id="starter">
-      <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="Starter">
-      <div class="description">
-        <p>Cursos 100% online e gratuitos para você entrar com o pé direito nas tecnologias mais desejadas do mercado.<br><br></p>
-        <div class="info">
-          <p>2 Modulos</p>
-          <p class="price">Gratuito</p>
-        </div>
-      </div> 
-    </div>
+    {% for course in courses %}
 
-    <div class="card" id="launchbase">
-      <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="LaunchBase">
-      <div class="description">
-        <p>Domine programação do zero e tenha acesso às melhores oportunidades do mercado no menor tempo possível.<br><br></p>
-        <div class="info">
-          <p>6 Modulos</p>
-          <p class="price">Pago</p>
-        </div>
-      </div> 
-    </div>
+      <div class="card" id="{{course.id}}">
 
-    <div class="card" id="gostack">
-      <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="GoStack">
-      <div class="description">
-        <p>Treinamento imersivo nas tecnologias mais modernas de desenvolvimento web e mobile para quem não tem tempo a perder.</p>
-        <div class="info">
-          <p>6 Modulos</p>
-          <p class="price">Pago</p>
+        <img src="{{ course.img }}" alt="{{ course.id }}">
+
+        <div class="description">
+          <p>{{ course.description }}</p>
+        
+          <div class="info">
+            <p>{{ course.info }}</p>
+            <p class="price">{{ course.price }}</p>
+          </div>
         </div>
-      </div> 
-    </div>
+      </div>
+
+    {% endfor %}
+
 
   </section> <!-- cards -->
 
