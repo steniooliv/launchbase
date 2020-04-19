@@ -93,6 +93,7 @@ header {
 .card {
   background-color: #7159c1;
   display: grid;
+  cursor: pointer;
 
 }
 
@@ -161,4 +162,38 @@ iframe {
   height: 90%;
   position: absolute;
   top: 5vh;
+}
+
+/* FEATURED */
+
+.featured-wrapper.card_image-container {
+  position: relative;
+}
+
+.featured {
+  background-color: #f7d05f;
+  color: #111;
+  padding: 2px 8px;
+  position: absolute;
+  right: 5px;
+  top:-10px;
+  border-radius: 16px;
+}
+
+/* VIDEO PAGE */
+.video {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.card_video-container {
+  position: relative;
+  padding-top: 62.5%;
+}
+
+.card_video-container iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
