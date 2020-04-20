@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Cursos</title>
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+  <h1>Cursos</h1>
+
+  <section class="cards">
+
+    {% for course in courses %}
+
+      <div class="card" id="{{course.id}}">
+
+        <img src="{{ course.img }}" alt="{{ course.id }}">
+
+        <div class="description">
+          <p>{{ course.description }}</p>
+        
+          <div class="info">
+            <p>{{ course.info }}</p>
+            <p class="price">{{ course.price }}</p>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+
+  </section> <!-- cards -->
+
+</div> <!--wrapper-->
+
+<script src="/scripts.js"></script>
+
+{% endblock %}

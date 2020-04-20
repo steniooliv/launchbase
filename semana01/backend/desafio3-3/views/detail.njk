@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>{{course.id}}</title>
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+ 
+  <section class="cards detail">
+
+      <div class="card" id="{{course.id}}">
+
+        <img src="{{ course.img }}" alt="{{ course.id }}">
+
+        <div class="description">
+          <p>{{ course.description }}</p>
+        
+          <div class="info">
+            <p>{{ course.info }}</p>
+            <p class="price">{{ course.price }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="open"><a href="http://www.rocketseat.com.br/{{course.id}}">Saiba Mais</a></div>
+
+
+  </section> <!-- cards -->
+
+</div> <!--wrapper-->
+
+{% endblock %}
