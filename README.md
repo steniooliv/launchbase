@@ -63,7 +63,7 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
     - Atualizar com Dados Dinâmicos - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/backend/desafio3-2)
     
 - Desafio 3-3 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-3-pagina-descricao-curso.md)
-    - Página de Descrição de Curso Dinâmica - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/backend/desafio3-2)
+    - Página de Descrição de Curso Dinâmica - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/backend/desafio3-3)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
