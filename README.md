@@ -65,5 +65,9 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 - Desafio 3-3 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-3-pagina-descricao-curso.md)
     - Página de Descrição de Curso Dinâmica - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/backend/desafio3-3)
 
+### Refatorando Foodfy - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-refatorando-foodfy.md)
+
+- Refatorar o Foodfy Trazendo as Informações do Back-end Usando o Express e Nunjucks - [Resolução](https://github.com/steniooliv/launchbase/tree/foodfy-backend/semana01/foodfy)
+
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
