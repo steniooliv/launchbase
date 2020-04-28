@@ -16,7 +16,7 @@ nunjucks.configure("views", {
 });
 
 server.get("/", function(req, res) {
-  return res.render("index");
+  return res.render("index", {data});
 });
 
 server.get("/about", function(req, res) {
