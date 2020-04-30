@@ -19,7 +19,7 @@ O repositório está separado por semana, dentro de cada semana tem os arquivos 
 Abaixo também tem um link para um resumo de todo o contéudo abordado para revisões e dúvidas.
 
 ## :calendar: Semana 01
-- Revisões e dúvidas - [Notion](https://www.notion.so/Segunda-b0bb93458edd4d56b0055cfc54e6483f)
+- Revisões e dúvidas - [Notion](https://www.notion.so/Semana-01-b0bb93458edd4d56b0055cfc54e6483f)
 
 ### Introdução ao desenvolvimento web - [Path](https://github.com/steniooliv/launchbase/tree/master/semana01/intro)
 
@@ -68,6 +68,14 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 ### Refatorando Foodfy - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-refatorando-foodfy.md)
 
 - Refatorar o Foodfy Trazendo as Informações do Back-end Usando o Express e Nunjucks - [Resolução](https://github.com/steniooliv/launchbase/tree/foodfy-backend/semana01/foodfy)
+
+## :calendar: Semana 02
+- Revisões e dúvidas - [Notion](https://www.notion.so/Semana-02-36a584d8aefe448bb6c19ce67f2b4097)
+
+### Controle de Academia - [Path](https://github.com/steniooliv/launchbase/tree/master/semana02/gym)
+
+- Desafio 4-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-1-header.md)
+    - Criar Página de Aulas Particulares [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-1)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
