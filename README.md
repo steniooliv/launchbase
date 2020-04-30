@@ -58,6 +58,16 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 
 - Desafio 3-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-1-primeiro-servidor.md)
     - Primeiro Servidor com Rotas e Aproveitamento de Código - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/backend/desafio3-1)
+    
+- Desafio 3-2 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-2-nunjucks-e-dados-dinamicos.md)
+    - Atualizar com Dados Dinâmicos - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/backend/desafio3-2)
+    
+- Desafio 3-3 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-3-pagina-descricao-curso.md)
+    - Página de Descrição de Curso Dinâmica - [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana01/backend/desafio3-3)
+
+### Refatorando Foodfy - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-03/blob/master/desafios/03-refatorando-foodfy.md)
+
+- Refatorar o Foodfy Trazendo as Informações do Back-end Usando o Express e Nunjucks - [Resolução](https://github.com/steniooliv/launchbase/tree/foodfy-backend/semana01/foodfy)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
