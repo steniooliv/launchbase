@@ -77,5 +77,8 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 - Desafio 4-1 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-1-header.md)
     - Criar Página de Aulas Particulares [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-1)
 
+- Desafio 4-2 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-2-card-teacher.md)
+    - Criar Card de Professores [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-2)
+
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
