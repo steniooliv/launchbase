@@ -13,7 +13,7 @@ exports.post = function(req, res) {
     }
   }
 
-  let { avatar_url, name, birth, gender, services} = req.body;
+  let {avatar, name, birth, gender, services} = req.body;
 
   birth = Date.parse(req.body.birth);
   created_at = Date.now();
@@ -21,7 +21,7 @@ exports.post = function(req, res) {
   
   data.instructors.push({
     id,
-    avatar_url,
+    avatar,
     name,
     birth,
     gender,
