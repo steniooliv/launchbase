@@ -1,1 +1,11 @@
-{"avatar":"http://google.com","name":"Stenio","birth":"1990-06-08","gender":"M","services":"Musculação, Crossfit"}
+{
+  "instructors": [
+    {
+      "avatar": "http://google.com",
+      "name": "Stenio",
+      "birth": "1990-06-08",
+      "gender": "M",
+      "services": "Musculação, Crossfit"
+    }
+  ]
+}
