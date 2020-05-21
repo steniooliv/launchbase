@@ -1,7 +1,7 @@
 const fs = require("fs");
 const Intl = require('intl');
 const data = require("./data.json");
-const {age} = require("./date")
+const {age, date} = require("./date")
 
 //show
 
@@ -9,7 +9,7 @@ exports.show = function(req, res) {
   const {id} = req.params;
 
   const foundInstructor = data.instructors.find(function(instructor){
-    return instructor.id == id;
+    return id == instructor.id;
   })
 
   if (!foundInstructor) return res.send("Instructor not found.");
@@ -60,6 +60,23 @@ exports.post = function(req, res) {
   })
 }
 
-// update
+// edit
+
+exports.edit = function(req, res) {
+  const {id} = req.params;
+
+  const foundInstructor = data.instructors.find(function(instructor){
+    return id == instructor.id;
+  })
+
+  if (!foundInstructor) return res.send("Instructor not found.");
+
+  const instructor = {
+    ...foundInstructor,
+    birth: date(foundInstructor.birth)
+  }
+
+  return res.render("instructors/edit", {instructor: instructor});
+}
 
 // delete
