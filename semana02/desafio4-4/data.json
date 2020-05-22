@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://www.google.com",
+      "name": "Stenio Oliveira",
+      "birth": 644803200000,
+      "grade": "highSchool",
+      "classroom": "presential",
+      "courses": "Informática, Manutenção",
+      "created_at": 1589600645639
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+
+<form class="card" method="POST" action="/teachers">
+
+  <section class="image" style="background: url(https://source.unsplash.com/collection/10085420/900x900) no-repeat center center / cover"></section>
+
+  <section class="detail">
+  
+    <h3>Detalhes</h3>
+    
+    <div class="items">
+      <div>Avatar URL<div>
+      <input type="url" name="avatar_url" placeholder="http://">
+    </div>
+    
+    <div class="items">
+      <div>Nome Completo</div>
+      <input type="text" name="name" placeholder="Nome do Porfessor">
+    </div>
+
+    <div class="items">
+      <div>Data Nascimento</div>
+      <input type="date" name="birth">
+    </div>
+
+    <div class="items">
+      <div>Grau Escolaridade</div>
+      <select name="grade">
+        <option value="choice" selected disabled>Escolha uma opção:</option>
+        <option value="highSchool">Ensino Médio Completo</option>
+        <option value="graduate">Ensino Superior Completo</option>
+        <option value="phd">Mestrado e Doutorado</option>
+      </select>
+    </div>
+
+    <div class="items">
+      <div>Tipo de Aula</div>
+        <div>
+          <input type="radio" name="classroom" value="presential" id="presential"><label for="presential">Presencial</label>
+          <input type="radio" name="classroom" value="distance" id="distance"><label for="distance">À Distância</label>
+        </div>
+    </div>
+
+    <div class="items">
+      <div>Área de Atuação:</div>
+      <input type="text" name="courses" placeholder="Digite os cursos separados por vírgula">
+    </div>
+
+    <button type="submit">Salvar</button>
+    
+  </section>
+
+</form>
+
+{% endblock content %}
