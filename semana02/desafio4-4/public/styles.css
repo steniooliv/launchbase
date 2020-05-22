@@ -15,7 +15,7 @@ body {
   width: 100%;
   text-align: center;
   background-color: #FFF;
-  padding: 24px;
+  padding: 16px;
   box-sizing: border-box;
 }
 
@@ -53,7 +53,7 @@ body {
   width: 880px;
   min-height: 400px;
   background-color: #fff;
-  margin: 45px auto;
+  margin: 38px auto;
 
   display: grid;
   grid-template-columns: 40% 60%;
@@ -74,7 +74,7 @@ body {
 }
 
 .detail {
-  padding: 24px;
+  padding: 16px;
 }
 
 .detail .items {
@@ -151,6 +151,7 @@ label {
   margin-right: 20px;
 }
 
+a.button,
 button[type="submit"] {
   font-size: 16px;
   font-weight: bold;
@@ -159,7 +160,16 @@ button[type="submit"] {
   text-align: center;
   width: 250px;
   padding: 8px 32px;
-  margin: 10 auto;
+  margin: 0 auto;
+  margin-top: 16px;
   display: grid;
   justify-content: center;
+  border-radius: 8px;
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
 }
