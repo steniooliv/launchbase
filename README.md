@@ -83,5 +83,8 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 - Desafio 4-3 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-3-form-and-routes-teacher.md)
     - Criar Card de Professores [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-3)
 
+- Desafio 4-4 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-4-show-edit-format-teacher.md)
+    - Apresentar, Editar e Formatar Dados do Professor [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-4)
+
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
