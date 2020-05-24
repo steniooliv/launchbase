@@ -1,0 +1,54 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://source.unsplash.com/collection/10085420/900x900",
+      "name": "Stenio Oliveira",
+      "birth": 644803200000,
+      "grade": "highSchool",
+      "classroom": "presential",
+      "courses": "Informática, Manutenção",
+      "created_at": 1589600645639
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/10085420/900x900",
+      "name": "Igor Oliveira",
+      "birth": 780451200000,
+      "grade": "graduate",
+      "classroom": "distance",
+      "courses": "Informática, Manutenção",
+      "created_at": 1590112966659
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://www.google.com",
+      "name": "Isadora Oliveira",
+      "birth": 743040000000,
+      "grade": "graduate",
+      "classroom": "presential",
+      "courses": "Informática, Manutenção",
+      "created_at": 1590114438719
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://source.unsplash.com/collection/10085420/900x900",
+      "name": "Stenio Oliveira",
+      "birth": 644803200000,
+      "grade": "graduate",
+      "classroom": "presential",
+      "courses": "Informática, Manutenção",
+      "created_at": 1590116701898
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://source.unsplash.com/collection/10085420/900x900",
+      "name": "Stenio Oliveira",
+      "birth": 644803200000,
+      "grade": "graduate",
+      "classroom": "presential",
+      "courses": "Informática, Manutenção",
+      "created_at": 1590116737375
+    }
+  ]
+}

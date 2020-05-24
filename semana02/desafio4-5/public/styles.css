@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #bdb2b9;
+}
+
+.links {
+  width: 100%;
+  text-align: center;
+  background-color: #FFF;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.links a {
+  font-size: 24px;
+  line-height: 28px;
+  color: #ff00bf;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.links a + a {
+  margin-left: 32px;
+}
+
+.links a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #ff00bf;
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+.links a:hover::after {
+  width: 100%;
+  transition: width 300ms ease;
+}
+
+/*  CARD  */
+
+.card {
+  width: 880px;
+  min-height: 400px;
+  background-color: #fff;
+  margin: 38px auto;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.4);
+
+  animation: down 800ms ease-out;  
+}
+
+@keyframes down {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.detail {
+  padding: 16px;
+}
+
+.detail .items {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+}
+
+.detail .items:last-child {
+  border: none;
+}
+
+.detail h3,
+.detail .items div:nth-child(1) {
+  font-size: 18px;
+  line-height: 28px;
+  color: #777;
+  letter-spacing: 0.7;
+  font-weight: normal;
+}
+
+.detail h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff00bf;
+  
+}
+
+.detail .items div:nth-child(2) {
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+}
+
+.detail .items div:nth-child(2) span {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ff00bf;
+  border-radius: 6px;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 8px;
+}
+
+
+/* FORM */
+
+input, select {
+  width: 100%;
+  outline: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input::placeholder {
+  font-weight: normal;
+}
+
+input[type="date"] {
+  width: initial;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 6px;
+}
+
+label {
+  font-size: 16px;
+  color: #444;
+  margin-right: 20px;
+}
+
+a.button,
+button[type="submit"] {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff00bf;
+  text-align: center;
+  width: 250px;
+  padding: 8px 32px;
+  margin: 0 auto;
+  margin-top: 16px;
+  display: grid;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+}
