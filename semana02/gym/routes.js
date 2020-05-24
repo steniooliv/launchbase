@@ -18,7 +18,11 @@ routes.get("/instructors/:id", instructors.show);
 
 routes.get("/instructors/:id/edit", instructors.edit);
 
-routes.post("/instructors", instructors.post)
+routes.post("/instructors", instructors.post);
+
+routes.put("/instructors", instructors.put);
+
+routes.delete("/instructors", instructors.delete);
 
 routes.get("/members", function(req, res) {
   return res.render("members/index");
