@@ -40,7 +40,7 @@
         
         <option
           value="highSchool"
-          {% if teacher.grade == "highSchool" %}
+          {% if teacher.grade == "Ensino Médio Completo" %}
             selected = "selected"
           {% endif %}
         >
@@ -49,7 +49,7 @@
         
         <option
           value="graduate"
-          {% if teacher.grade == "graduate" %}
+          {% if teacher.grade == "Ensino Superior Completo" %}
             selected = "selected"
           {% endif %}
         >
@@ -58,7 +58,7 @@
 
         <option
           value="phd"
-          {% if teacher.grade == "phd" %}
+          {% if teacher.grade == "Mestrado e Doutorado" %}
             selected = "selected"
           {% endif %}
         >
