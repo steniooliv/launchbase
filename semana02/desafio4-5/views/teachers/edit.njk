@@ -12,9 +12,17 @@
   
     <h3>Detalhes</h3>
     <form method="POST" action="/teachers?_method=PUT">    
-        {% include "teachers/fields.njk" %}
+      
+      {% include "teachers/fields.njk" %}
+      <input type="hidden" name="id" value="{{teacher.id}}">
 
-        <input type="hidden" name="id" value="{{teacher.id}}">
+    </form>
+
+    <form id="delete" action="/teachers?_method=DELETE" method="post">
+      
+      <button type="submit">Deletar</button>
+      <input type="hidden" name="id" value="{{teacher.id}}">
+
     </form>
 
     
