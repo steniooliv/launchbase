@@ -129,7 +129,7 @@ input, select {
   outline: none;
   color: #444;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 input::placeholder {
@@ -158,18 +158,26 @@ button[type="submit"] {
   color: #fff;
   background-color: #ff00bf;
   text-align: center;
-  width: 250px;
+  width: 245px;
   padding: 8px 32px;
   margin: 0 auto;
   margin-top: 16px;
-  display: grid;
-  justify-content: center;
   border-radius: 8px;
+  float: left;
 }
 
 a.button {
-  display: block;
+  width: 245px;
+  display: grid;
+  justify-content: center;
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
+  float: none;
+}
+
+#delete button[type="submit"] {
+  margin-left: 5px;
+  background-color: #ff0000;
+  
 }
