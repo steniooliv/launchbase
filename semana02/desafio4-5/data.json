@@ -3,9 +3,9 @@
     {
       "id": 1,
       "avatar_url": "https://source.unsplash.com/collection/10085420/900x900",
-      "name": "Stenio Oliveira",
+      "name": "Stenio de Oliveira",
       "birth": 644803200000,
-      "grade": "highSchool",
+      "grade": "phd",
       "classroom": "presential",
       "courses": "Informática, Manutenção",
       "created_at": 1589600645639
@@ -49,6 +49,16 @@
       "classroom": "presential",
       "courses": "Informática, Manutenção",
       "created_at": 1590116737375
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://source.unsplash.com/collection/10085420/900x900",
+      "name": "Stenio Oliveira",
+      "birth": 644803200000,
+      "grade": "graduate",
+      "classroom": "presential",
+      "courses": "Informática, Manutenção",
+      "created_at": 1590366605995
     }
   ]
 }
