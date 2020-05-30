@@ -12,18 +12,30 @@
       </tr>
     </thead>
     <tbody>
+      
       {% for instructor in instructors %}
-      <tr>
-        <td>
-          <span style="background-image: url({{instructor.avatar}})"></span>
-          {{instructor.name}}
-        </td>
-        <td>{{instructor.services}}</td>
-        <td><a href="/instructors/{{instructor.id}}">ver</a></td>
-      </tr>
+      
+        <tr>
+          <td>
+            <div>
+              <span style="background-image: url({{instructor.avatar}})"></span>
+              {{instructor.name}}
+            </div>
+          </td>
+
+          <td>
+            {% for service in instructor.services %}
+              <span>{{service}}</span>
+            {% endfor %}
+          </td>
+          <td><a href="/instructors/{{instructor.id}}">ver</a></td>
+        </tr>
+
       {% endfor %}
+
     </tbody>
   </table>
+
 </div>
 
 {% endblock content %}
