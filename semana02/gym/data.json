@@ -6,8 +6,48 @@
       "name": "Stenio Oliveira",
       "birth": 644803200000,
       "gender": "M",
-      "services": "Musculação, Crossfit",
+      "services": [
+        "Musculação",
+        " Crossfit"
+      ],
       "created_at": 1590351514742
+    },
+    {
+      "id": 2,
+      "avatar": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Igor Oliveira",
+      "birth": 780451200000,
+      "gender": "M",
+      "services": [
+        "Musculação",
+        " Natação"
+      ],
+      "created_at": 1590797794425
+    },
+    {
+      "id": 3,
+      "avatar": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Isadora Oliveira",
+      "birth": 743040000000,
+      "gender": "F",
+      "services": [
+        "Musculação",
+        " Crossfit",
+        " Natação",
+        " Musculação",
+        " Crossfit",
+        " Natação"
+      ],
+      "created_at": 1590799960740
+    },
+    {
+      "id": 4,
+      "avatar": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Ketren Aparecida Rodrigues",
+      "birth": 854582400000,
+      "gender": "F",
+      "services": "Musculação, Crossfit",
+      "created_at": 1590802086849
     }
   ]
 }
