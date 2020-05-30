@@ -6,7 +6,14 @@ const {age, date} = require("./date")
 //index
 
 exports.index = function(req, res) {
+
+  for (let instructor of data.instructors) {
+    instructor.services = String(instructor.services);
+    instructor.services = instructor.services.split(",");
+  }
+
   return res.render("instructors/index", {instructors: data.instructors});
+
 }
 
 //show
