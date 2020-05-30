@@ -30,7 +30,7 @@ exports.show = function(req, res) {
   const instructor = {
     ...foundInstructor,
     age: age(foundInstructor.birth),
-    services: foundInstructor.services.split(","),
+    // services: foundInstructor.services.split(","),
     created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
   }
 
@@ -113,6 +113,7 @@ exports.put = function(req, res) {
     ...req.body,
     birth: Date.parse(req.body.birth),
     id: Number(req.body.id),
+    services: String(req.body.services).split(","),
   }
 
   data.instructors[index] = instructor;

@@ -20,7 +20,8 @@
       "gender": "M",
       "services": [
         "Musculação",
-        " Natação"
+        " Natação",
+        " Teste"
       ],
       "created_at": 1590797794425
     },
@@ -46,7 +47,10 @@
       "name": "Ketren Aparecida Rodrigues",
       "birth": 854582400000,
       "gender": "F",
-      "services": "Musculação, Crossfit",
+      "services": [
+        "Musculação",
+        " Crossfit"
+      ],
       "created_at": 1590802086849
     }
   ]
