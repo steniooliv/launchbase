@@ -3,7 +3,11 @@ const data = require("./data.json");
 const {age, date, graduation} = require("./utils");
 const Intl = require("intl");
 
-//
+exports.index = function(req, res) {
+
+
+  return res.render("teachers/index");
+}
 
 exports.post = function(req, res) {
 
