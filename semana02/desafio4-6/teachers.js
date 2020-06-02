@@ -5,8 +5,13 @@ const Intl = require("intl");
 
 exports.index = function(req, res) {
 
+  for (let teacher of data.teachers) {
+    teacher.courses = String(teacher.courses).split(",");
+  }
 
-  return res.render("teachers/index");
+  console.log(data.teachers)
+
+  return res.render("teachers/index", {teachers: data.teachers});
 }
 
 exports.post = function(req, res) {
@@ -54,7 +59,7 @@ exports.show = function(req, res) {
   const teacher = {
     ...foundTeacher,
     age: age(foundTeacher.birth),
-    courses: foundTeacher.courses.split(","),
+    courses: String(foundTeacher.courses).split(","),
     created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at),
 
   }
@@ -99,6 +104,7 @@ exports.update = function(req, res) {
     ...req.body,
     birth: Date.parse(req.body.birth),
     id: Number(req.body.id),
+    courses: String(req.body.courses),
   }
 
   data.teachers[index] = teacher;
