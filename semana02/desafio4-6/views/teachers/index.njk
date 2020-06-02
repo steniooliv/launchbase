@@ -2,48 +2,43 @@
 
 {% block content %}
 
-<div class="card">
+<div class="card table-content">
 
-  <section class="image" style="background: url(https://source.unsplash.com/collection/10085420/900x900) no-repeat center center / cover"></section>
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Nome Completo</th>
+        <th>Acompanhamento</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
 
-  <section class="detail">
+    <tbody>
+    {% for teacher in teachers %}
+
+      <tr>
+        <td>
+          <div>
+            <span style="background-image: url({{teacher.avatar_url}})"></span>
+            {{teacher.name}}
+          </div>
+        </td>
+        <td>
+          {% for course in teacher.courses %}
+            <span>{{course}}</span>
+          {% endfor %}
+        </td>
+        <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+      </tr>
+
+    {% endfor %}
+    
+    </tbody>
+ 
+
+  </table>
+
   
-    <h3>Detalhes</h3>
-
-    <div class="items">
-      <div>Nome Completo</div>
-      <div>Stenio Oliveira</div>
-    </div>
-
-    <div class="items">
-      <div>Idade</div>
-      <div>29 anos</div>
-    </div>
-
-    <div class="items">
-      <div>Grau Escolaridade</div>
-      <div>Doutorado</div>
-    </div>
-
-    <div class="items">
-      <div>Tipo de Aula</div>
-      <div>Presencial</div>
-    </div>
-
-    <div class="items">
-      <div>Acompanhamento</div>
-        <div>
-          <span>Matemática</span>
-          <span>Física</span>
-        </div>
-    </div>
-
-    <div class="items">
-      <div>Desde</div>
-      <div>06/05/2020</div>
-    </div>
-
-  </section>
 
 </div>
 
