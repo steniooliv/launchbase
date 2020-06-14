@@ -1,45 +1,41 @@
 const fs = require("fs");
 const Intl = require('intl');
-const data = require("./data.json");
-const {age, date} = require("./date")
-
-//index
+const data = require("../data.json");
+const {age, date} = require("../date");
 
 exports.index = function(req, res) {
 
-  for (let instructor of data.instructors) {
-    instructor.services = String(instructor.services);
-    instructor.services = instructor.services.split(",");
+  for (let member of data.members) {
+    member.services = String(member.services);
+    member.services = member.services.split(",");
   }
 
-  return res.render("instructors/index", {instructors: data.instructors});
+  return res.render("members/index", {members: data.members});
 
-}
-
-//show
+};
 
 exports.show = function(req, res) {
   const {id} = req.params;
 
-  const foundInstructor = data.instructors.find(function(instructor){
-    return id == instructor.id;
+  const foundMember = data.members.find(function(member){
+    return id == member.id;
   })
 
-  if (!foundInstructor) return res.send("Instructor not found.");
+  if (!foundMember) return res.send("Member not found.");
 
-  const instructor = {
-    ...foundInstructor,
-    age: age(foundInstructor.birth),
-    // services: foundInstructor.services.split(","),
-    created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
+  const member = {
+    ...foundMember,
+    age: age(foundMember.birth),
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundMember.created_at),
   }
 
-  return res.render("instructors/show", {instructor});
+  return res.render("members/show", {member});
 
-}
+};
 
-
-//create
+exports.create = function(req, res) {
+  return res.render("members/create")
+};
 
 exports.post = function(req, res) {
   
@@ -55,9 +51,9 @@ exports.post = function(req, res) {
 
   birth = Date.parse(req.body.birth);
   created_at = Date.now();
-  id = Number(data.instructors.length + 1);
+  id = Number(data.members.length + 1);
   
-  data.instructors.push({
+  data.members.push({
     id,
     avatar,
     name,
@@ -69,76 +65,70 @@ exports.post = function(req, res) {
 
   fs.writeFile("./data.json", JSON.stringify(data, null, 2), function(err){
     if (err) return res.send("Write file error!");
-    return res.redirect("/instructors");
+    return res.redirect("/members");
   })
-}
-
-// edit
+};
 
 exports.edit = function(req, res) {
   const {id} = req.params;
 
-  const foundInstructor = data.instructors.find(function(instructor){
-    return id == instructor.id;
+  const foundMember = data.members.find(function(member){
+    return id == member.id;
   })
 
-  if (!foundInstructor) return res.send("Instructor not found.");
+  if (!foundMember) return res.send("Member not found.");
 
-  const instructor = {
-    ...foundInstructor,
-    birth: date(foundInstructor.birth)
+  const member = {
+    ...foundMember,
+    birth: date(foundMember.birth)
   }
 
-  return res.render("instructors/edit", {instructor: instructor});
-}
-
-//put
+  return res.render("members/edit", {member: member});
+};
 
 exports.put = function(req, res) {
   const {id} = req.body;
   let index = 0;
 
-  const foundInstructor = data.instructors.find(function(instructor, foundIndex){
-    if (id == instructor.id) {
+  const foundMember = data.members.find(function(member, foundIndex){
+    if (id == member.id) {
       index = foundIndex;
       return true;
     };
   })
 
-  if (!foundInstructor) return res.send("Instructor not found.");
+  if (!foundMember) return res.send("Member not found.");
 
   
-  const instructor = {
-    ...foundInstructor,
+  const member = {
+    ...foundMember,
     ...req.body,
     birth: Date.parse(req.body.birth),
     id: Number(req.body.id),
     services: String(req.body.services).split(","),
   }
 
-  data.instructors[index] = instructor;
+  data.members[index] = member;
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
     if (err) return res.send("Write error!");
-    return res.redirect(`/instructors/${id}`);
+    return res.redirect(`/members/${id}`);
   })
 
-}
-
-// delete
+};
 
 exports.delete = function(req, res) {
   const {id} = req.body;
 
-  const filteredInstructors = data.instructors.filter(function(instructor) {
-    return instructor.id != id;
+  const filteredMembers = data.members.filter(function(member) {
+    return member.id != id;
   })
 
-  data.instructors = filteredInstructors;
+  data.members = filteredMembers;
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
     if (err) return res.send("Delete error!");
-    return res.redirect("/instructors");
+    return res.redirect("/members");
   })
 
-}
+};

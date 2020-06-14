@@ -1,9 +1,7 @@
 const fs = require("fs");
 const Intl = require('intl');
-const data = require("./data.json");
-const {age, date} = require("./date")
-
-//index
+const data = require("../data.json");
+const {age, date} = require("../date");
 
 exports.index = function(req, res) {
 
@@ -14,9 +12,7 @@ exports.index = function(req, res) {
 
   return res.render("instructors/index", {instructors: data.instructors});
 
-}
-
-//show
+};
 
 exports.show = function(req, res) {
   const {id} = req.params;
@@ -36,10 +32,11 @@ exports.show = function(req, res) {
 
   return res.render("instructors/show", {instructor});
 
-}
+};
 
-
-//create
+exports.create = function(req, res) {
+  return res.render("members/create")
+};
 
 exports.post = function(req, res) {
   
@@ -71,9 +68,7 @@ exports.post = function(req, res) {
     if (err) return res.send("Write file error!");
     return res.redirect("/instructors");
   })
-}
-
-// edit
+};
 
 exports.edit = function(req, res) {
   const {id} = req.params;
@@ -90,9 +85,7 @@ exports.edit = function(req, res) {
   }
 
   return res.render("instructors/edit", {instructor: instructor});
-}
-
-//put
+};
 
 exports.put = function(req, res) {
   const {id} = req.body;
@@ -123,9 +116,7 @@ exports.put = function(req, res) {
     return res.redirect(`/instructors/${id}`);
   })
 
-}
-
-// delete
+};
 
 exports.delete = function(req, res) {
   const {id} = req.body;
@@ -141,4 +132,4 @@ exports.delete = function(req, res) {
     return res.redirect("/instructors");
   })
 
-}
+};
