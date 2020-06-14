@@ -89,5 +89,8 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 - Desafio 4-5 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-5-put-delete-teacher.md)
     - Criar Método PUT e DELETE [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-5)
 
+- Desafio 4-6 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-6-list-teachers.md)
+    - Criar Listagem de Professores [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-6)
+
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
