@@ -1,7 +1,7 @@
 const fs = require("fs");
 const Intl = require('intl');
 const data = require("../data.json");
-const {age, date} = require("../date");
+const {date, blood} = require("../utils");
 
 exports.index = function(req, res) {
 
@@ -25,8 +25,8 @@ exports.show = function(req, res) {
 
   const member = {
     ...foundMember,
-    age: age(foundMember.birth),
-    created_at: new Intl.DateTimeFormat('pt-BR').format(foundMember.created_at),
+    birth: date(foundMember.birth).birthDay,
+    blood: blood(foundMember.blood),
   }
 
   return res.render("members/show", {member});
@@ -47,20 +47,19 @@ exports.post = function(req, res) {
     }
   }
 
-  let {avatar, name, birth, gender, services} = req.body;
-
   birth = Date.parse(req.body.birth);
-  created_at = Date.now();
-  id = Number(data.members.length + 1);
+
+  let id = 1;
+  const lastMember = data.members[data.members.length - 1];
+
+  if (lastMember) {
+    id = lastMember.id + 1;
+  }
   
   data.members.push({
     id,
-    avatar,
-    name,
+    ...req.body,
     birth,
-    gender,
-    services,
-    created_at,
   });
 
   fs.writeFile("./data.json", JSON.stringify(data, null, 2), function(err){
@@ -80,7 +79,7 @@ exports.edit = function(req, res) {
 
   const member = {
     ...foundMember,
-    birth: date(foundMember.birth)
+    birth: date(foundMember.birth).iso
   }
 
   return res.render("members/edit", {member: member});
