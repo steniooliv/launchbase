@@ -1,15 +1,13 @@
 const fs = require("fs");
 const data = require("../data.json");
-const {age, date, graduation} = require("../utils");
+const {age, date, grade} = require("../utils");
 const Intl = require("intl");
 
 exports.index = function(req, res) {
 
   for (let student of data.students) {
-    student.courses = String(student.courses).split(",");
+    student.grade = grade(student.grade);
   }
-
-  console.log(data.students)
 
   return res.render("students/index", {students: data.students});
 }
@@ -28,21 +26,19 @@ exports.post = function(req, res) {
     }
   }
 
-  let {avatar_url, name, birth, grade, classroom, courses} = req.body;
-
   birth = Date.parse(req.body.birth);
-  created_at = Date.now();
-  id = Number(data.students.length + 1);
+  
+  let id = 1;
+  const lastStudent = data.students[data.students.length - 1];
+
+  if (lastStudent) {
+    id = lastStudent + 1;
+  }
 
   data.students.push({
     id,
-    avatar_url,
-    name,
+    ...req.body,
     birth,
-    grade,
-    classroom,
-    courses,
-    created_at,
   });
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
@@ -62,10 +58,8 @@ exports.show = function(req, res) {
 
   const student = {
     ...foundStudent,
-    age: age(foundStudent.birth),
-    courses: String(foundStudent.courses).split(","),
-    created_at: new Intl.DateTimeFormat("pt-BR").format(foundStudent.created_at),
-
+    birth: date(foundStudent.birth).birthDay,
+    grade: grade(foundStudent.grade),
   }
 
   return res.render("students/show", {student} );
@@ -82,9 +76,7 @@ exports.edit = function(req, res) {
 
   const student = {
     ...foundStudent,
-    birth: date(foundStudent.birth),
-    grade: graduation(foundStudent.grade),
-
+    birth: date(foundStudent.birth).iso,
   }
 
   return res.render("students/edit", {student});
