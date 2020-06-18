@@ -28,6 +28,10 @@ body {
   position: relative;
 }
 
+.links a.active {
+  font-weight: bold;
+}
+
 .links a + a {
   margin-left: 32px;
 }
@@ -231,7 +235,8 @@ tbody tr td:first-child span {
   border: 2px solid #fff;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-content > a {
   background-color: #ff00bf;
   padding: 8px 16px;
   border-radius: 0px 16px;
@@ -240,6 +245,11 @@ tbody tr td:last-child a {
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.table-content > a {
+  margin-bottom: 16px;
+  display: inline-block;
 }
 
 .table-content thead tr th:last-child,
