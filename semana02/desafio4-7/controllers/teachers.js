@@ -9,8 +9,6 @@ exports.index = function(req, res) {
     teacher.courses = String(teacher.courses).split(",");
   }
 
-  console.log(data.teachers)
-
   return res.render("teachers/index", {teachers: data.teachers});
 }
 
