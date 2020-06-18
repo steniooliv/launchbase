@@ -4,7 +4,7 @@
 
 <div class="card">
 
-  <section class="image" style="background: url({{teacher.avatar_url}}) no-repeat center center / cover"></section>
+  <section class="image" style="background: url({{student.avatar_url}}) no-repeat center center / cover"></section>
 
   <section class="detail">
   
@@ -12,49 +12,30 @@
 
     <div class="items">
       <div>Nome Completo</div>
-      <div>{{teacher.name}}</div>
+      <div>{{student.name}}</div>
     </div>
 
     <div class="items">
-      <div>Idade</div>
-      <div>{{teacher.age}} anos</div>
+      <div>Email</div>
+      <div>{{student.email}}</div>
     </div>
 
     <div class="items">
-      <div>Grau Escolaridade</div>
-      <div>
-        {% if (teacher.grade) == "highSchool" %}
-          Ensino Médio Completo
-        {% elif (teacher.grade) == "graduate" %}
-          Ensino Superior Completo
-        {% else %}
-          Mestrado e Doutorado
-        {% endif %}
-      </div>
+      <div>Aniversário</div>
+      <div>{{student.birth}}</div>
     </div>
 
     <div class="items">
-      <div>Tipo de Aula</div>
-      <div>
-        {{"Presencial" if (teacher.classroom) == "presential" else "À Distância"}}
-      </div>
+      <div>Ano Escolar</div>
+      <div>{{student.grade}}</div>
     </div>
 
     <div class="items">
-      <div>Acompanhamento</div>
-        <div>
-          {% for course in teacher.courses %}
-          <span>{{course}}</span>
-          {% endfor %}
-        </div>
+      <div>Carga Horária Semanal</div>
+      <div>{{student.hours}}</div>
     </div>
 
-    <div class="items">
-      <div>Desde</div>
-      <div>{{teacher.created_at}}</div>
-    </div>
-
-    <a href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
+    <a href="/students/{{student.id}}/edit" class="button">Editar</a>
 
   </section>
 

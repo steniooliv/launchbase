@@ -4,7 +4,7 @@
         type="url"
         name="avatar_url"
         placeholder="http://"
-        value="{{teacher.avatar_url}}"
+        value="{{student.avatar_url}}"
       >
     </div>
     
@@ -13,8 +13,18 @@
       <input
         type="text"
         name="name"
-        placeholder="Nome do Porfessor"
-        value="{{teacher.name}}"
+        placeholder="Nome do Aluno"
+        value="{{student.name}}"
+      >
+    </div>
+
+    <div class="items">
+      <div>Email</div>
+      <input
+        type="Email"
+        name="email"
+        placeholder="Email do Aluno"
+        value="{{student.email}}"
       >
     </div>
 
@@ -23,88 +33,54 @@
       <input
         type="date"
         name="birth"
-        value="{{teacher.birth}}"
+        value="{{student.birth}}"
       >
     </div>
 
     <div class="items">
-      <div>Grau Escolaridade</div>
+      <div>Ano Escolar</div>
       <select name="grade">
-        <option
-          value="choice"
-          selected
-          disabled
-        >
-          Escolha uma opção:
+        <option value="5th" {% if student.grade == "5th" %} selected {% endif %}>
+          5º Ano Fundamental
         </option>
         
-        <option
-          value="highSchool"
-          {% if teacher.grade == "Ensino Médio Completo" %}
-            selected = "selected"
-          {% endif %}
-        >
-          Ensino Médio Completo
+        <option value="6th" {% if student.grade == "6th" %} selected {% endif %}>
+          6º Ano Fundamental
         </option>
         
-        <option
-          value="graduate"
-          {% if teacher.grade == "Ensino Superior Completo" %}
-            selected = "selected"
-          {% endif %}
-        >
-          Ensino Superior Completo
+        <option value="7th" {% if student.grade == "7th" %} selected {% endif %}>
+          7º Ano Fundamental
         </option>
-
-        <option
-          value="phd"
-          {% if teacher.grade == "Mestrado e Doutorado" %}
-            selected = "selected"
-          {% endif %}
-        >
-          Mestrado e Doutorado
+        
+        <option value="8th" {% if student.grade == "8th" %} selected {% endif %}>
+          8º Ano Fundamental
         </option>
-
+        
+        <option value="9th" {% if student.grade == "9th" %} selected {% endif %}>
+          9º Ano Fundamental
+        </option>
+        
+        <option value="1st" {% if student.grade == "1st" %} selected {% endif %}>
+          1º Ano Ensino Médio
+        </option>
+        
+        <option value="2nd" {% if student.grade == "2nd" %} selected {% endif %}>
+          2º Ano Ensino Médio
+        </option>
+        
+        <option value="3rd" {% if student.grade == "3rd" %} selected {% endif %}>
+          3º Ano Ensino Médio
+        </option>
       </select>
     </div>
 
     <div class="items">
-      <div>Tipo de Aula</div>
-        <div>
-          <input
-            type="radio"
-            name="classroom"
-            value="presential"
-            id="presential"
-            checked
-            {% if (teacher.classroom) == "presential" %}
-              checked
-            {% endif %}
-          >
-          <label for="presential">Presencial</label>
-          
-          <input
-            type="radio"
-            name="classroom"
-            value="distance"
-            id="distance"
-            {% if (teacher.classroom) == "distance" %}
-              checked
-            {% endif %}
-          >
-          <label for="distance">À Distância</label>
-
-        </div>
-    </div>
-
-    <div class="items">
-      <div>Área de Atuação:</div>
+      <div>Carga Horária Semanal</div>
       <input
-        type="text"
-        name="courses"
-        placeholder="Digite os cursos separados por vírgula"
-        value="{{teacher.courses}}"
+        type="number"
+        name="hours"
+        value="{{student.hours}}"
       >
     </div>
-
-      <button type="submit">Salvar</button>
+    
+    <button type="submit">Salvar</button>
