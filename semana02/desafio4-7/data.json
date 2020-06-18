@@ -1,6 +1,16 @@
 {
-  "students": [],
-  
+  "students": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Stenio Oliveira",
+      "email": "steniooliv@gmail.com",
+      "birth": 644803200000,
+      "grade": "3rd",
+      "hours": "30",
+      "courses": "undefined"
+    }
+  ],
   "teachers": [
     {
       "id": 1,
