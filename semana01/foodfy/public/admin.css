@@ -1,0 +1,74 @@
+/* ADMIN */
+
+.content-admin {
+  width: 100%;
+  height: 80px;
+  background-color: #111;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.content-admin header {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.content-admin .recipes {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.content-admin .recipes h1 {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.content-admin .recipes .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.content-admin .recipes .card {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  gap: 0;
+}
+
+.content-admin .recipes .card div:nth-child(2) {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.content-admin .recipes .card img {
+  width: 172px;
+  height: 80px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.content-admin .recipes .card h1 {
+  font-size: 18px;
+  line-height: 21px;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.content-admin .recipes .card h2 {
+  font-size: 14px;
+  line-height: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.content-admin .recipes .card a {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #6558C3;
+  margin: 0;
+}
