@@ -1,23 +1,6 @@
-<!DOCTYPE html>
+{% extends "layout.njk" %}
 
-<html>
-  <head>
-    <title>Foodfy</title>
-
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-
-  <body>
-
-    <div class="content">
-      <header>
-        <a class="link-logo" href="./"><img src="./assets/logo.png" alt="Foodfy" class="logo"></a>
-
-        <nav>
-          <a href="./about.html">Sobre</a>
-          <a href="./recipes.html">Receitas</a>
-        </nav>
-      </header>
+{% block content %}
 
       <main class="about">
         <h1>Sobre o Foodfy</h1>
@@ -36,13 +19,4 @@
 
       </main>
 
-    </div>
-
-    <footer>
-      <div>
-        <p>Todos direitos reservados, receitas Foodfy.</p>
-      </div>
-    </footer>
-
-  </body>
-</html>
+{% endblock %}
