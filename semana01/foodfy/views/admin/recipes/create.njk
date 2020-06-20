@@ -1,0 +1,29 @@
+{% extends "../layout.njk" %}
+
+{% block content %}
+
+<main>
+
+<div class="recipes">
+
+    <div class="header">
+      <h1>Criar receitas</h1>
+
+  <form action="/recipes" method="POST">
+      
+      <button type="submit">Salvar receita</button>
+    </div>
+
+    <div class="recipes">
+      {% include "./fields.njk" %}
+    </div>
+
+  </form>
+
+</div>
+
+</main>
+
+<script src="/scripts.js"></script>
+
+{% endblock%}
