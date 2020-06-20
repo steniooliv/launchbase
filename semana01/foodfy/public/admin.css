@@ -13,18 +13,45 @@
   margin: 0 auto;
 }
 
-.content-admin .recipes {
+.content-admin main {
   max-width: 940px;
   margin: 0 auto;
 }
 
-.content-admin .recipes h1 {
+.content-admin main .recipes h1 {
   font-family: "Roboto";
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
   color: #111;
   margin-bottom: 30px;
+}
+
+.content-admin main .recipes .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.content-admin main .recipes .header div:nth-child(2) {
+  display: flex;
+}
+
+.content-admin main .recipes .header button[type="submit"] {
+  padding: 9px 20px;
+  background-color: #6558C3;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  text-decoration: none;
+  border-radius: 4px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.content-admin main .recipes .header button.delete-button {
+  background-color: #dc4242;
 }
 
 .content-admin .recipes .cards {
@@ -71,4 +98,47 @@
   text-decoration: none;
   color: #6558C3;
   margin: 0;
+}
+
+/* FORM */
+
+.recipes .item div:nth-child(1) {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.recipes .item input,
+.recipes .item textarea {
+  width: 940px;
+  height: 49px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  outline: none;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.recipes .item:first-child {
+  margin-bottom: 15px;
+}
+
+.recipes .item .information textarea {
+  height: 200px;
+  resize: none;
+}
+
+#add-button {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: #6558C3;
+  background-color: #fff;
+  outline: none;
+  margin-bottom: 30px;
 }
