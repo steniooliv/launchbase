@@ -6,18 +6,21 @@
 
 <div class="recipes">
 
-    <div class="header">
-      <div><h1>Criar receitas</h1></div>
+  <div class="header">
+    <div><h1>Criar receitas</h1></div>
 
       <div>
+        <form action="/recipes" method="POST">
 
-        <button class="delete-button" type="submit">Deletar</button>
+          <button class="delete-button" type="submit">Deletar</button>
+
+        </form>
 
   <form action="/recipes" method="POST">
-        
-        <button type="submit">Salvar receita</button>
+          
+          <button type="submit">Salvar receita</button>
+        </div>
       </div>
-    </div>
 
     <div class="recipes">
       {% include "./fields.njk" %}
