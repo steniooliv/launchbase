@@ -4,7 +4,7 @@
   "description": "",
   "main": "data.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon -e njk,js,css,json server.js"
   },
   "keywords": [],
   "author": "steniooliv",
