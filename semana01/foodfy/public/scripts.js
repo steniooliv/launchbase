@@ -25,7 +25,8 @@ for (let i = 0; i < hide.length; i++) {
 // add ingredient
 
 function addIngredient() {
-  const ingredints = document.querySelector("#ingredients");
+
+  const ingredients = document.querySelector(".ingredients");
   const fieldContainer = document.querySelectorAll(".ingredient");
 
   const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
@@ -33,7 +34,7 @@ function addIngredient() {
   if (newField.children[0].value == "") return false;
 
   newField.children[0].value = "";
-  ingredints.appendChild(newField);
+  ingredients.appendChild(newField);
 }
 
 document.querySelector(".add-ingredient").addEventListener("click",addIngredient);
@@ -41,7 +42,7 @@ document.querySelector(".add-ingredient").addEventListener("click",addIngredient
 // add prepare
 
 function addPreparation() {
-  const ingredints = document.querySelector("#preparations");
+  const preparations = document.querySelector(".preparations");
   const fieldContainer = document.querySelectorAll(".preparation");
 
   const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
@@ -49,7 +50,7 @@ function addPreparation() {
   if (newField.children[0].value == "") return false;
 
   newField.children[0].value = "";
-  ingredints.appendChild(newField);
+  preparations.appendChild(newField);
 }
 
 document.querySelector(".add-prepare").addEventListener("click",addPreparation);
