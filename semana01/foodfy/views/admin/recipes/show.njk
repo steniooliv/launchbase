@@ -7,7 +7,7 @@
   <div class="recipes">
     <div class="header">
       <h1>Gerenciar receitas</h1>
-      <a href="/admin/recipes/:id/edit">Editar receita</a>
+      <button type="submit" onclick="window.location.href='/admin/recipes/{{recipes.id}}/edit'">Editar receita</button>
     </div>
       <div class="recipes-detail">
         <img src="{{recipes.image}}" alt="{{recipes.title}}">
