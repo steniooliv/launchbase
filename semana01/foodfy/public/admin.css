@@ -133,7 +133,7 @@
   resize: none;
 }
 
-#add-button {
+.add-button {
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
