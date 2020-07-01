@@ -50,7 +50,6 @@
       ],
       "information": "Pizza de liquidificador é uma receita deliciosa e supersimples de preparar. Feita toda no liquidificador, ela é bem prática para o dia a dia. Aqui no TudoGostoso você também encontra diversas delícias práticas feitas no liquidificador: massa de panqueca, torta de frango de liquidificador, pão de queijo de liquidificador, bolo de banana, bolo de chocolate e muito mais!"
     },
-  
     {
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
       "title": "Asinhas de frango ao barbecue",
@@ -68,7 +67,6 @@
       ],
       "information": ""
     },
-  
     {
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/lasanha.png",
       "title": "Lasanha mac n' cheese",
@@ -89,7 +87,6 @@
       ],
       "information": "Recheie a lasanha com o que preferir."
     },
-  
     {
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
       "title": "Espaguete ao alho",
@@ -114,7 +111,6 @@
       ],
       "information": "Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira."
     },
-    
     {
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/doce.png",
       "title": "Docinhos pão-do-céu",
@@ -136,6 +132,36 @@
         "açúcar de confeiteiro e corte em quadrados."
       ],
       "information": ""
+    },
+    {
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
+      "ingredients": [
+        "Macarrão"
+      ],
+      "preparation": [
+        "Pegar o macarrão e cozinhar"
+      ],
+      "information": "teste"
+    },
+    {
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
+      "ingredients": [
+        "Macarrão"
+      ],
+      "preparation": [
+        "Pegar o macarrão e cozinhar"
+      ],
+      "information": "teste"
+    },
+    {
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
+      "ingredients": [
+        "Macarrão"
+      ],
+      "preparation": [
+        "Pegar o macarrão e cozinhar"
+      ],
+      "information": "asdfasdfadsfsad, adfadsfas"
     }
   ]
 }
