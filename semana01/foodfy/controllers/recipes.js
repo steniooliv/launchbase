@@ -63,15 +63,7 @@ exports.post = function(req, res) {
     }
   }
   
-  let id = 0;
-  const lastRecipe = Number(data.recipes[data.recipes.length - 1]);
-  
-  if (lastRecipe) {
-    id = lastRecipe.id + 1;
-  }
-  
   data.recipes.push({
-    id,
     ...req.body
   });
 
