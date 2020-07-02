@@ -49,25 +49,32 @@ exports.edit = function(req, res) {
 
   const recipes = {
     ...foundRecipe,
-    information: Array(foundRecipe.information)
   }
-  console.log(recipes.information)
 
   return res.render("admin/recipes/edit", {recipes});
 }
 
 exports.post = function(req, res) {
-  let id = 0;
-  const lastRecipe = data.recipes[data.recipes.length - 1];
+  const keys = Object.keys(req.body);
 
+  for (key of keys) {
+    if (req.body[key] == "") {
+      return res.send("Fill all fields!");
+    }
+  }
+  
+  let id = 0;
+  const lastRecipe = Number(data.recipes[data.recipes.length - 1]);
+  
   if (lastRecipe) {
     id = lastRecipe.id + 1;
   }
   
   data.recipes.push({
     id,
-    ...req.body,
+    ...req.body
   });
+
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if (err) return res.send("Write file error!");
