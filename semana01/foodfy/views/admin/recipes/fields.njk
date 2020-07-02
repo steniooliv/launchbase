@@ -5,21 +5,68 @@
     </div>
 </div>
 
+<div class="item">
+  <div>Título</div>
+    <div>
+      <input type="text" name="title" placeholder="Título" value={{recipes.title}}>
+    </div>
+</div>
+
+<div class="item">
+  <div>Autor</div>
+    <div>
+      <input type="text" name="author" placeholder="Autor" value={{recipes.author}}>
+    </div>
+</div>
+
 <div class="item ingredients">
   <div>Ingredientes</div>
+
+    {% if recipes.ingredients %}
+
+      {% for ingredient in recipes.ingredients %}
+
+        <div class="ingredient">
+          <input type="text" name="ingredient[]" placeholder="Ingredientes" value={{ingredient}}>
+        </div>
+
+      {% endfor %}
+    
+    {% else %}
+
   <div class="ingredient">
-    <input type="text" name="ingredients[]" placeholder="Ingredientes" value={{recipes.ingredients}}>
+    <input type="text" name="ingredients[]" placeholder="Ingredientes" value="">
   </div>
+
+    {% endif %}
+
 </div>
 
 <button type="button" class="add-button add-ingredient">Adicionar novo ingrediente</button>
 
 <div class="item preparations">
   <div>Modo de Preparo</div>
+
+    {% if recipes.preparation %}
+
+      {% for preparation in recipes.preparation %}
+
+        <div class="preparation">
+          <input type="text" name="preparation[]" placeholder="Modo de Prepraro" value={{preparation}}>
+        </div>
+
+      {% endfor %}
+    
+    {% else %}
+
   <div class="preparation">
-    <input type="text" name="preparation[]" placeholder="Modo de Prepraro" value={{recipes.preparation}}>
-  </div>
+      <input type="text" name="preparation[]" placeholder="Modo de Prepraro" value=""}>
+    </div>
+
+    {% endif %}
+
 </div>
+
 <button type="button" class="add-button add-prepare">Adicionar novo passo</button>
 
 <div class="item">
