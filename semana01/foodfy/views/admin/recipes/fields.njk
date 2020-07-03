@@ -1,21 +1,21 @@
 <div class="item">
   <div>Imagem da receita</div>
     <div>
-      <input type="url" name="image" placeholder="https://" value={{recipes.image}}>
+      <input type="url" name="image" placeholder="https://" value="{{recipes.image}}">
     </div>
 </div>
 
 <div class="item">
   <div>Título</div>
     <div>
-      <input type="text" name="title" placeholder="Título" value={{recipes.title}}>
+      <input type="text" name="title" placeholder="Título" value="{{recipes.title}}">
     </div>
 </div>
 
 <div class="item">
   <div>Autor</div>
     <div>
-      <input type="text" name="author" placeholder="Autor" value={{recipes.author}}>
+      <input type="text" name="author" placeholder="Autor" value="{{recipes.author}}">
     </div>
 </div>
 
@@ -27,7 +27,7 @@
       {% for ingredient in recipes.ingredients %}
 
         <div class="ingredient">
-          <input type="text" name="ingredient[]" placeholder="Ingredientes" value={{ingredient}}>
+          <input type="text" name="ingredient[]" placeholder="Ingredientes" value="{{ingredient}}">
         </div>
 
       {% endfor %}
@@ -47,23 +47,23 @@
 <div class="item preparations">
   <div>Modo de Preparo</div>
 
-    {% if recipes.preparation %}
+  {% if recipes.preparation %}
 
-      {% for preparation in recipes.preparation %}
+    {% for preparation in recipes.preparation %}
 
-        <div class="preparation">
-          <input type="text" name="preparation[]" placeholder="Modo de Prepraro" value={{preparation}}>
-        </div>
+      <div class="preparation">
+        <input type="text" name="preparation[]" placeholder="Modo de Prepraro" value="{{preparation}}">
+      </div>
 
-      {% endfor %}
-    
-    {% else %}
+    {% endfor %}
+  
+  {% else %}
 
   <div class="preparation">
-      <input type="text" name="preparation[]" placeholder="Modo de Prepraro" value=""}>
-    </div>
+    <input type="text" name="preparation[]" placeholder="Modo de Prepraro" value="">
+  </div>
 
-    {% endif %}
+  {% endif %}
 
 </div>
 
@@ -71,7 +71,9 @@
 
 <div class="item">
   <div>Informações adicionais</div>
+
   <div class="information">
-    <textarea name="information" value={{recipes.information}} cols="30" rows="10"></textarea>
+    <textarea name="information" cols="30" rows="10">{{recipes.information}}</textarea>
   </div>
+
 </div>
