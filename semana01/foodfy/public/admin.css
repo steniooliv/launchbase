@@ -33,7 +33,7 @@
   align-items: baseline;
 }
 
-.content-admin main .recipes .header div:nth-child(2) {
+.content-admin main .recipes .header .btn-edit-delete{
   display: flex;
 }
 
