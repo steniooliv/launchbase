@@ -64,9 +64,10 @@ exports.post = function(req, res) {
   }
   
   data.recipes.push({
-    ...req.body
+    ...req.body,
   });
 
+  console.log(req.body);
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if (err) return res.send("Write file error!");
