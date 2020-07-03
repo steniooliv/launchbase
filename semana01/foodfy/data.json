@@ -138,18 +138,6 @@
       ],
       "information": "",
       "id": 5
-    },
-    {
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
-      "title": "Macarrao",
-      "author": "Stenio",
-      "ingredients": [
-        "300gr macarrao"
-      ],
-      "preparation": [
-        "cozinhar o macarrao"
-      ],
-      "information": "juntar tudo no prato"
     }
   ]
 }
