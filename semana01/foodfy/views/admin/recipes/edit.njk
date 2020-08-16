@@ -4,34 +4,46 @@
 
 <main>
 
-<div class="recipes">
+  <div class="recipes">
 
-  <div class="header">
+    <div class="header">
 
-      <div><h1>Criar receitas</h1></div>
+      <h1>Criar receitas</h1>
 
-      <div class="btn-edit-delete">
-      
-        <form action="/admin/recipes?_method=DELETE" method="POST">
-          <button class="delete-button" type="submit">Deletar</button>
-        </form>
-
-        <form action="/admin/recipes?_method=PUT" method="POST">
-          <button type="submit">Salvar receita</button>
-        </form>
-
+      <div class="buttons">
+        <button form="form-delete" class="delete-button" type="submit">Deletar</button>
+        <button form="form-put" type="submit">Salvar receita</button>
       </div>
 
-  </div>
-
-    <div class="recipes-fields">
-      {% include "./fields.njk" %}
     </div>
 
-</div>
+    <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
+      <input
+        type="hidden"
+        name="id"
+        value="{{recipes.id}}"
+      >
+    </form>
+
+    <form id="form-put" action="/admin/recipes?_method=PUT" method="POST">
+      <div class="recipes-fields">
+        {% include "./fields.njk" %}
+      </div>
+
+        <input
+          type="hidden"
+          name="id"
+          value="{{recipes.id}}"
+        >
+
+    </form>
+
+  </div>
 
 </main>
 
 <script defer src="/scripts.js"></script>
+
+{% include "../scripts.njk" %}
 
 {% endblock%}
