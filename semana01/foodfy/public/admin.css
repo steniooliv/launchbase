@@ -37,6 +37,7 @@
   display: flex;
 }
 
+.content-admin main .recipes .header #create-recipes,
 .content-admin main .recipes .header button[type="submit"] {
   padding: 9px 20px;
   background-color: #6558C3;
