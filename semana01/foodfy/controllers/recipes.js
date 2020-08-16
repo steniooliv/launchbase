@@ -67,11 +67,51 @@ exports.post = function(req, res) {
     ...req.body,
   });
 
-  console.log(req.body);
-
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if (err) return res.send("Write file error!");
     return res.redirect("/admin/recipes");
   })
 
+}
+
+exports.put = function(req, res) {
+  const {id} = req.body;
+  let index = 0;
+
+  const foundRecipe = data.recipes.find(function(recipe, foundIndex) {
+    if (id == recipe.id) {
+      index = foundIndex;
+      return true;
+    }
+  });
+
+  if (!foundRecipe) return res.send("Recipe not found.");
+
+  const recipe = {
+    ...foundRecipe,
+    ...req.body,
+    id: Number(req.body.id),
+  }
+
+  data.recipes[index] = recipe;
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+    if (err) return res.send("Write file error!");
+    return res.redirect(`/admin/recipes/${id}`);
+  });
+}
+
+exports.delete = function(req, res) {
+  const {id} = req.body;
+
+  const filteredRecipes = data.recipes.filter(function(recipe) {
+    return recipe.id != id;
+  });
+
+  data.recipes = filteredRecipes;
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+    if (err) return res.send("Delete file error!");
+    return res.redirect("/admin/recipes/");
+  });
 }
