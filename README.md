@@ -101,7 +101,7 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 ### Persistindo dados da aplicação - [Path](https://github.com/steniooliv/launchbase/tree/master/semana03/)
 
 - Desafio 5-1 - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-05/blob/master/desafios/05-1-refatorando-aplicacao.md)
-    - Refatorando aplicação e configurando o BD [Resolução]()
+    - Refatorando aplicação e configurando o BD [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana03/desafio5-1)
 
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
