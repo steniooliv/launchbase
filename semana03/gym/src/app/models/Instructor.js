@@ -6,7 +6,7 @@ module.exports = {
   all(callback) {
 
     db.query(`SELECT * FROM instructors`, function(err, results) {
-        if (err) return res.send('Database Error!');
+        if(err) return res.send('Database Error!');
       
         callback(results.rows);
       });
@@ -38,7 +38,18 @@ module.exports = {
       if (err) return res.send('Database Error!');
       
       callback(results.rows[0])
-    })
+    });
   },
+
+  find(id, callback) {
+    db.query(`
+      SELECT *
+      FROM instructors
+      WHERE id = $1`, [id], function(err, results) {
+        if(err) return res.send('Database Error!');
+
+        callback(results.rows[0]);
+      });
+  }
 
 }
