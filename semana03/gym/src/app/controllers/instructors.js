@@ -18,7 +18,7 @@ module.exports = {
       instructor.created_at = date(instructor.created_at).format;
 
       return res.render("instructors/show", { instructor });
-    })
+    });
 
   },
 
@@ -44,8 +44,13 @@ module.exports = {
 
   edit(req, res) {
 
-    return
+    Instructor.find(req.params.id, function(instructor) {
+      if (!instructor) return res.send("Instructor not found!");
 
+      instructor.age = age(instructor.birth).iso;
+
+      return res.render("instructors/edit", { instructor });
+    });
   },
 
   put(req, res) {

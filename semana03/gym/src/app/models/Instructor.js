@@ -4,8 +4,10 @@ const db = require('../../config/db');
 
 module.exports = {
   all(callback) {
+    const query = 
+      `SELECT * FROM instructors`
 
-    db.query(`SELECT * FROM instructors`, function(err, results) {
+    db.query(query, function(err, results) {
         if(err) return res.send('Database Error!');
       
         callback(results.rows);
@@ -42,11 +44,16 @@ module.exports = {
   },
 
   find(id, callback) {
-    db.query(`
-      SELECT *
-      FROM instructors
-      WHERE id = $1`, [id], function(err, results) {
-        if(err) return res.send('Database Error!');
+
+    const query = 
+      `SELECT * FROM instructors WHERE id = $1`
+
+    const values = [
+      id,
+    ]
+    
+    db.query(query, values, function(err, results) {
+        if (err) return res.send('Database Error!');
 
         callback(results.rows[0]);
       });
