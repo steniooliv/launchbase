@@ -62,9 +62,9 @@ module.exports = {
       }
     }
 
-    let {avatar, name, birth, gender, services} = req.body;
-    
-    return
+    Instructor.update(req.body, function() {
+      return res.redirect(`instructors/${req.body.id}`);
+    })
 
   },
 
