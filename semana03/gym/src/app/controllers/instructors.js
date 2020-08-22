@@ -47,8 +47,8 @@ module.exports = {
     Instructor.find(req.params.id, function(instructor) {
       if (!instructor) return res.send("Instructor not found!");
 
-      instructor.age = age(instructor.birth).iso;
-
+      instructor.birth = date(instructor.birth).iso;
+      
       return res.render("instructors/edit", { instructor });
     });
   },
