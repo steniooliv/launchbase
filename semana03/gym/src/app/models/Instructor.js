@@ -8,7 +8,7 @@ module.exports = {
       `SELECT * FROM instructors`
 
     db.query(query, function(err, results) {
-        if(err) return res.send('Database Error!');
+        if(err) throw `Database Error! ${err}`;
       
         callback(results.rows);
       });
@@ -37,7 +37,7 @@ module.exports = {
 
 
     db.query(query, values, function(err, results) {
-      if (err) return res.send('Database Error!');
+      if (err) throw `Database Error! ${err}`;
       
       callback(results.rows[0])
     });
@@ -53,7 +53,7 @@ module.exports = {
     ]
     
     db.query(query, values, function(err, results) {
-        if (err) return res.send('Database Error!');
+        if (err) throw `Database Error! ${err}`;
 
         callback(results.rows[0]);
       });
@@ -66,7 +66,7 @@ module.exports = {
       name=($2),
       birth=($3),
       gender=($4),
-      services=($5),
+      services=($5)
       WHERE id = $6
     `
     const values = [
@@ -79,11 +79,10 @@ module.exports = {
     ]
 
     db.query(query, values, function(err, results) {
-      if (err) return res.send('Database Error!');
+      if (err) throw `Database Error! ${err}`;
 
       callback();
     });
   },
-  
 
 }
