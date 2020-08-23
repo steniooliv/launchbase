@@ -4,8 +4,10 @@ const db = require('../../config/db');
 
 module.exports = {
   all(callback) {
-    const query = 
-      `SELECT * FROM instructors`
+    const query = `
+      SELECT * FROM instructors
+      ORDER BY name ASC
+    `
 
     db.query(query, function(err, results) {
         if(err) throw `Database Error! ${err}`;
