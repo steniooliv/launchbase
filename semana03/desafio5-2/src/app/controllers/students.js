@@ -1,5 +1,4 @@
 const {age, date, grade} = require("../../lib/utils");
-const Intl = require("intl");
 
 module.exports = {
   index(req, res) {
