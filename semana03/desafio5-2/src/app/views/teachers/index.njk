@@ -25,12 +25,11 @@
             {{teacher.name}}
           </div>
         </td>
-        <td>
-          {% for course in teacher.courses %}
-            <span>{{course}}</span>
-          {% endfor %}
-        </td>
+
+        <td>{{teacher.subjects_taught}}</td>
+
         <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+
       </tr>
 
     {% endfor %}
