@@ -1,4 +1,4 @@
-const {age, date, graduation} = require("../../lib/utils");
+const { age, date, graduation } = require("../../lib/utils");
 const Teacher = require('../models/Teacher');
 
 module.exports = {
@@ -64,5 +64,4 @@ module.exports = {
       return res.redirect('teachers');
     })
   }
-
 }
