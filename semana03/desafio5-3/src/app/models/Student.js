@@ -26,8 +26,9 @@ module.exports = {
         birth,
         grade,
         hours,
-        created_at
-      ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+        created_at,
+        teacher_id
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
       RETURNING id
     `
     const values = [
@@ -37,7 +38,8 @@ module.exports = {
       date(data.birth).iso,
       data.grade,
       data.hours,
-      date(Date.now()).iso
+      date(Date.now()).iso,
+      data.teacher
     ]
 
     db.query(query, values, function(err, results) {
@@ -49,7 +51,10 @@ module.exports = {
 
   find(id, callback) {
     const query = `
-    SELECT * FROM student WHERE id = $1
+    SELECT student.*, teacher.name AS teacher_name
+    FROM student
+    LEFT JOIN teacher ON (student.teacher_id = teacher.id)
+    WHERE student.id = $1
   `
 
   const values = [
@@ -105,5 +110,16 @@ module.exports = {
       
       callback();
     });
+  },
+
+  teacherSelectOptions(callback) {
+    const query = `
+      SELECT name, id FROM teacher
+    `
+    db.query(query, function(err, results) {
+      if (err) throw `Database Error! ${err}`;
+
+      callback(results.rows);
+    })
   }
 }
