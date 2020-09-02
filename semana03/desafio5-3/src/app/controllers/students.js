@@ -14,7 +14,9 @@ module.exports = {
   },
 
   create(req, res) {
-    return res.render('students/create');
+    Student.teacherSelectOptions(function(options) {
+      return res.render('students/create', {teacherOptions: options});
+    })
   },
 
   show(req, res) {
@@ -47,7 +49,9 @@ module.exports = {
 
       student.birth = date(student.birth).iso;
 
-      return res.render('students/edit', {student});
+      Student.teacherSelectOptions(function(options) {
+        return res.render("students/edit", {student, teacherOptions: options});
+      })
     });
   },
 
