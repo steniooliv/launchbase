@@ -46,21 +46,40 @@ module.exports = {
       callback(results.rows[0]);
     });
   },
-
+  
   find(id, callback) {
     const query = `
-      SELECT * FROM teacher WHERE id = $1
+    SELECT * FROM teacher WHERE id = $1
     `
-
+    
     const values = [
       id,
     ]
-
+    
     db.query(query, values, function(err, results) {
       if (err) throw `Database Error! ${err}`;
-
+      
       callback(results.rows[0]);
     });
+  },
+  
+  findBy(filter, callback) {
+    const query = `
+      SELECT teacher.*, count(student) AS total_students
+      FROM teacher
+      LEFT JOIN student ON (teacher.id = student.teacher_id)
+      WHERE teacher.name ILIKE '%${filter}%'
+      OR teacher.subjects_taught ILIKE '%${filter}%'
+      GROUP BY teacher.id
+      ORDER BY total_students DESC
+    `
+
+    db.query(query, function(err, results) {
+      if (err) throw `Database Error! ${err}`;
+      
+      callback(results.rows);
+    });
+
   },
 
   update(data, callback) {
