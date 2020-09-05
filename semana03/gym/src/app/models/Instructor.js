@@ -122,5 +122,31 @@ module.exports = {
 
       callback();
     });
+  },
+
+  paginate(params) {
+    const { filter, limit, offset, callback } = params;
+
+    let query = `
+      SELECT instructors.*, count(members) AS total_students
+      FROM instructors
+      LEFT JOIN members ON (instructors.id = members.instructors_id)
+    `
+    if (filter) {
+      query = `${query}
+        WHERE instructors.name ILIKE '%${filter}%'
+        OR instructors.services ILIKE '%${filter}%'
+      `
+    }
+
+    query = `${query}
+      GROUP BY instructors.id LIMIT ${limit} OFFSET ${offset}
+    `
+
+    db.query(query, [limit, offset], function(err, results) {
+      if (err) throw `Database Error! ${err}`;
+
+      callback(results.rows)
+    });
   }
 }
