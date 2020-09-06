@@ -130,7 +130,7 @@ module.exports = {
     let query = `
       SELECT instructors.*, count(members) AS total_students
       FROM instructors
-      LEFT JOIN members ON (instructors.id = members.instructors_id)
+      LEFT JOIN members ON (instructors.id = members.instructor_id)
     `
     if (filter) {
       query = `${query}
@@ -140,7 +140,7 @@ module.exports = {
     }
 
     query = `${query}
-      GROUP BY instructors.id LIMIT ${limit} OFFSET ${offset}
+      GROUP BY instructors.id LIMIT $1 OFFSET $2
     `
 
     db.query(query, [limit, offset], function(err, results) {
