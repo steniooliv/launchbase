@@ -145,7 +145,7 @@ module.exports = {
     }
     
     let query = `
-      SELECT instructors.*, ${totalQuery} count(members) AS total_students
+      SELECT instructors.*, ${totalQuery}, count(members) AS total_students
       FROM instructors
       LEFT JOIN members ON (instructors.id = members.instructor_id)
       ${filterQuery}
