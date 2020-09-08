@@ -1,0 +1,98 @@
+<div class="items">
+      <div>Avatar URL<div>
+      <input
+        type="url"
+        name="avatar_url"
+        placeholder="http://"
+        value="{{student.avatar_url}}"
+      >
+    </div>
+    
+    <div class="items">
+      <div>Nome Completo</div>
+      <input
+        type="text"
+        name="name"
+        placeholder="Nome do Aluno"
+        value="{{student.name}}"
+      >
+    </div>
+
+    <div class="items">
+      <div>Email</div>
+      <input
+        type="Email"
+        name="email"
+        placeholder="Email do Aluno"
+        value="{{student.email}}"
+      >
+    </div>
+
+    <div class="items">
+      <div>Data Nascimento</div>
+      <input
+        type="date"
+        name="birth"
+        value="{{student.birth}}"
+      >
+    </div>
+
+    <div class="items">
+      <div>Ano Escolar</div>
+      <select name="grade">
+        <option value="5th" {% if student.grade == "5th" %} selected {% endif %}>
+          5º Ano Fundamental
+        </option>
+        
+        <option value="6th" {% if student.grade == "6th" %} selected {% endif %}>
+          6º Ano Fundamental
+        </option>
+        
+        <option value="7th" {% if student.grade == "7th" %} selected {% endif %}>
+          7º Ano Fundamental
+        </option>
+        
+        <option value="8th" {% if student.grade == "8th" %} selected {% endif %}>
+          8º Ano Fundamental
+        </option>
+        
+        <option value="9th" {% if student.grade == "9th" %} selected {% endif %}>
+          9º Ano Fundamental
+        </option>
+        
+        <option value="1st" {% if student.grade == "1st" %} selected {% endif %}>
+          1º Ano Ensino Médio
+        </option>
+        
+        <option value="2nd" {% if student.grade == "2nd" %} selected {% endif %}>
+          2º Ano Ensino Médio
+        </option>
+        
+        <option value="3rd" {% if student.grade == "3rd" %} selected {% endif %}>
+          3º Ano Ensino Médio
+        </option>
+      </select>
+    </div>
+
+    <div class="items">
+      <div>Carga Horária Semanal</div>
+      <input
+        type="number"
+        name="hours"
+        value="{{student.hours}}"
+      >
+    </div>
+
+    <div class="items">
+      <div>Professor</div>
+      <select name="teacher">
+        {% for teacher in teacherOptions %}
+            <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %} selected {% endif %} >
+              {{teacher.name}}
+            </option>
+          {% endfor %}
+
+      </select>
+    </div>
+    
+    <button type="submit">Salvar</button>
