@@ -293,3 +293,33 @@ td:last-child {
 .table-container .header form button {
   margin: 0;
 }
+
+/* PAGINATION */
+
+.table-container {
+  display: grid;
+  grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+  margin: 0;
+  align-self: start;
+}
+
+.table-container .pagination {
+  margin: 0;
+  align-self: end;
+  justify-self: center;
+}
+
+.table-container .pagination a,
+.table-container .pagination span {
+  color: #7159c1;
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.table-container .pagination a:hover {
+  filter: brightness(0.3);
+  border-bottom: 1px solid #7159c1;
+}
