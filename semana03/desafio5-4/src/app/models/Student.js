@@ -121,5 +121,43 @@ module.exports = {
 
       callback(results.rows);
     })
+  },
+
+  paginate(params) {
+    const {filter, limit, offset, callback} = params;
+
+    let filterQuery = "";
+    let totalQuery = `(
+      SELECT count(*)
+      FROM student
+      ) AS total
+    `
+
+    if (filter) {
+      filterQuery = `
+        WHERE student.name ILIKE '%${filter}%'
+        OR student.email ILIKE '%${filter}%'
+      `
+
+      totalQuery = `(
+        SELECT count(*)
+        FROM student
+        ${filterQuery}
+      ) AS total
+      `
+    }
+
+    let query = `
+      SELECT student.*, ${totalQuery}
+      FROM student
+      ${filterQuery}
+      LIMIT $1 OFFSET $2
+    `
+
+    db.query(query, [limit, offset], function(err, results) {
+      if (err) throw `Database Error! ${err}`;
+
+      callback(results.rows)
+    });
   }
 }
