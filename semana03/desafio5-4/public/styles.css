@@ -308,3 +308,38 @@ td:last-child {
   width: initial;
   cursor: pointer;
 }
+
+/* PAGINATION */
+
+.table-content {
+  display: grid;
+  grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-content .header {
+  margin: 0;
+  align-self: start;
+}
+
+.table-content .pagination {
+  margin: 0;
+  align-self: end;
+  justify-self: center;
+}
+
+.table-content .pagination a,
+.table-content .pagination span {
+  color: #ff00bf;
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.table-content .pagination a:hover {
+  filter: brightness(0.4);
+  border-bottom: 1px solid #ff00bf;
+}
+
+.table-content .pagination a.active {
+  border-bottom: 1px solid #ff00bf;
+  font-weight: bold;
+}
