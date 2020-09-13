@@ -1,4 +1,5 @@
-const data = require("../data");
+const dataRecipes = require("../data");
+const data = dataRecipes.recipes;
 
 exports.index = function(req, res) {
   return res.render("index", {data});
