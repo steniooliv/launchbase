@@ -94,6 +94,10 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 
 - Desafio 4-7 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-7-students.md)
     - Estruturando Estudantes [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-7)
+    
+### Admin Foodfy - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-04/blob/master/desafios/04-admin-foodfy.md)
+
+- Criar Página de Administração de Receitas - [Resolução](https://github.com/steniooliv/launchbase/tree/foodfy-admin/semana01/foodfy)
 
 ## :calendar: Semana 03
 - Revisões e dúvidas - [Notion](https://www.notion.so/Semana-03-05aaa9402f6440019a33254160343ba9)
