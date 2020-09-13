@@ -95,5 +95,22 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 - Desafio 4-7 - [Detalhes](https://github.com/Rocketseat/bootcamp-launchbase-desafios-04/blob/master/desafios/04-7-students.md)
     - Estruturando Estudantes [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana02/desafio4-7)
 
+## :calendar: Semana 03
+- Revisões e dúvidas - [Notion](https://www.notion.so/Semana-03-05aaa9402f6440019a33254160343ba9)
+
+### Persistindo dados da aplicação - [Path](https://github.com/steniooliv/launchbase/tree/master/semana03/)
+
+- Desafio 5-1 - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-05/blob/master/desafios/05-1-refatorando-aplicacao.md)
+    - Refatorando aplicação e configurando o BD [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana03/desafio5-1)
+    
+- Desafio 5-2 - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-05/blob/master/desafios/05-2-interagindo-bd.md)
+    - Interagindo com o BD [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana03/desafio5-2)
+    
+- Desafio 5-3 - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-05/blob/master/desafios/05-3-relacionamentos-filtros-bd.md)
+    - Relacionamentos e Filtros no BD [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana03/desafio5-3)
+
+- Desafio 5-4 - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-05/blob/master/desafios/05-4-paginacao-bd.md)
+    - Paginação de Resultados no BD [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana03/desafio5-4)
+
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
