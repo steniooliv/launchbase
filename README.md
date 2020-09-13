@@ -109,5 +109,8 @@ Abaixo também tem um link para um resumo de todo o contéudo abordado para revi
 - Desafio 5-3 - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-05/blob/master/desafios/05-3-relacionamentos-filtros-bd.md)
     - Relacionamentos e Filtros no BD [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana03/desafio5-3)
 
+- Desafio 5-4 - [Detalhes](https://github.com/rocketseat-education/bootcamp-launchbase-desafios-05/blob/master/desafios/05-4-paginacao-bd.md)
+    - Paginação de Resultados no BD [Resolução](https://github.com/steniooliv/launchbase/tree/master/semana03/desafio5-4)
+
 ### Update
 A cada atualização este arquivo será atualizado junto com os demais links.
