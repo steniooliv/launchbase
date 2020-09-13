@@ -1,12 +1,12 @@
 {
   "name": "foodfy",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "data.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
-    "nodemon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, views'"
+    "nodemon": "nodemon src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views'"
   },
   "keywords": [],
   "author": "steniooliv",
