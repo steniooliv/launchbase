@@ -1,0 +1,66 @@
+{% extends "../layout.njk" %}
+
+{% block content %}
+
+<main>
+
+  <div class="recipes">
+    <div class="header">
+      <h1>Gerenciar Chefs</h1>
+      
+      <div class="buttons">
+          <a id="create-recipes" href="/admin/chefs/create">Criar Chef</a>
+      </div>
+    </div>
+
+    <div class="chefs">
+
+      <div class="card">
+        <div>
+          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
+        </div>
+        <div>
+          <h1>Stenio Oliveira{{card.title}}</h1>
+          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
+        </div>
+        <div>
+          <h1>Stenio Oliveira{{card.title}}</h1>
+          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
+        </div>
+        <div>
+          <h1>Stenio Oliveira{{card.title}}</h1>
+          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
+        </div>
+        <div>
+          <h1>Stenio Oliveira{{card.title}}</h1>
+          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+
+{% endblock content %}
