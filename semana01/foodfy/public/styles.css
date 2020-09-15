@@ -18,31 +18,70 @@
   margin:0;
   padding: 0;
   border: 0;
+  align-self: center;
 }
 
 header {
   padding: 30px 0px;
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr ;
 }
 
 header, main {
   max-width: 940px;
 }
-
+.logo {
+  padding: 10px 0px;
+}
 .logo, nav {
   display: inline-block;
   vertical-align: middle;
 }
 
 nav {
-  margin-left: 10vw;
+  margin-left: 5vw;
+  align-self: center;
 }
 
 nav a {
-  font-size: 16;
-  line-height: 19px;
+  font-size: 15px;
+  line-height: 18px;
   color: #111111;
   text-decoration: none;
   margin: 0 15px;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+header .filter {
+  text-align: end;
+  align-self: center;
+}
+
+header .filter input {
+  width: 246px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #999999;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+header .filter button[type="submit"] {
+  width: 91px;
+  background-color: #6558C3;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  font-weight: bold;
+  padding: 9px 20px;
+  box-sizing: border-box;
 }
 
 .banner {
@@ -120,7 +159,7 @@ nav a {
   line-height: 21px;
   color: #111111;
   margin-bottom: 5px;
-  text-align: center;
+  text-align: left;
 }
 
 .img-chef {
@@ -128,7 +167,7 @@ nav a {
   line-height: 16px;
   color: #777777;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -258,3 +297,43 @@ footer p {
 .off {
   display: table-column;
 }
+
+.recipes .chefs-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.recipes .chefs-cards .chef-card {
+  display: initial;
+  display: grid;
+  grid: 1fr / 74px 1fr;
+}
+
+.recipes .chefs-cards .chef-card div:nth-child(2) {
+  align-self: center;
+}
+
+.recipes .chefs-cards .chef-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.recipes .chefs-cards .chef-card h1 {
+  font-size: 18px;
+  line-height: 21px;
+  color: #111;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.recipes .chefs-cards .chef-card h2{
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: #666;
+  text-align: left;
+}
+
