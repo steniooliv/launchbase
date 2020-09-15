@@ -15,45 +15,19 @@
 
     <div class="chefs">
 
-      <div class="card">
-        <div>
-          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
-        </div>
-        <div>
-          <h1>Stenio Oliveira{{card.title}}</h1>
-          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
-        </div>
-      </div>
+      {% for chef in chefs %}
 
-      <div class="card">
-        <div>
-          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
+        <div class="card">
+          <div>
+            <img src="{{chef.avatar_url}}" alt="{[chef.name}}" srcset="">
+          </div>
+          <div>
+            <h1>{{chef.name}}</h1>
+            <a href="/admin/chefs/{{chef.id}}" class="link">Visualizar</a>
+          </div>
         </div>
-        <div>
-          <h1>Stenio Oliveira{{card.title}}</h1>
-          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
-        </div>
-      </div>
 
-      <div class="card">
-        <div>
-          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
-        </div>
-        <div>
-          <h1>Stenio Oliveira{{card.title}}</h1>
-          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <img src="https://github.com/steniooliv.png" alt="{[card.title}}" srcset="">
-        </div>
-        <div>
-          <h1>Stenio Oliveira{{card.title}}</h1>
-          <a href="/admin/recipes/{{card.id}}" class="link">Visualizar</a>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
 

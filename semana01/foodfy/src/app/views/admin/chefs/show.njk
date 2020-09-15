@@ -7,14 +7,14 @@
   <div class="recipes">
 
     <div class="header">
-      <h1>Chef: {{chefs.name}}</h1>
+      <h1>Chef: {{chef.name}}</h1>
       <button type="submit" onclick="window.location.href='/admin/chefs/{{chefs.id}}/edit'">Editar Chef</button>
     </div>
 
     <div class="chefs-detail">
-      <img src="https://github.com/steniooliv.png" alt="{{chefs.name}}">
-      <h1>Stenio Oliveira{{chefs.name}}</h1>
-      <h3>4 Receitas{{chefs.recipes}}</h2>
+      <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
+      <h1>{{chef.name}}</h1>
+      <h3>4 Receitas</h2>
 
       <div class="chefs-recipes">
             
@@ -22,49 +22,20 @@
 
         <div class="cards">
 
-          <div class="card">
-            <div>
-              <img src="/asinhas.png" alt="{[card.title}}" srcset="">
-            </div>
-            <div>
-              <h1>Título da receira</h1>
-              <h2>por Stenio Oliveira</h2>
-              <a href="/admin/chefs/{{card.id}}" class="link">Visualizar</a>
-            </div>
-          </div>
+          {% for recipe in recipes %}
 
-          <div class="card">
-            <div>
-              <img src="/asinhas.png" alt="{[card.title}}" srcset="">
+            <div class="card">
+              <div>
+                <img src="{{recipe.image}}" alt="{[recipe.name}}" srcset="">
+              </div>
+              <div>
+                <h1>{{recipe.name}}</h1>
+                <h2>por {{chef.name}}</h2>
+                <a href="/admin/recipes/{{recipes.id}}" class="link">Visualizar</a>
+              </div>
             </div>
-            <div>
-              <h1>Título da receira</h1>
-              <h2>por Stenio Oliveira</h2>
-              <a href="/admin/chefs/{{card.id}}" class="link">Visualizar</a>
-            </div>
-          </div>
 
-          <div class="card">
-            <div>
-              <img src="/asinhas.png" alt="{[card.title}}" srcset="">
-            </div>
-            <div>
-              <h1>Título da receira</h1>
-              <h2>por Stenio Oliveira</h2>
-              <a href="/admin/chefs/{{card.id}}" class="link">Visualizar</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <div>
-              <img src="/asinhas.png" alt="{[card.title}}" srcset="">
-            </div>
-            <div>
-              <h1>Título da receira</h1>
-              <h2>por Stenio Oliveira</h2>
-              <a href="/admin/chefs/{{card.id}}" class="link">Visualizar</a>
-            </div>
-          </div>
+          {% endfor %}
 
         </div>
 
