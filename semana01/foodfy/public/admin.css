@@ -111,6 +111,7 @@
   margin-bottom: 10px;
 }
 
+.recipes .item select,
 .recipes .item input,
 .recipes .item textarea {
   width: 940px;
@@ -142,4 +143,144 @@
   background-color: #fff;
   outline: none;
   margin-bottom: 30px;
+}
+
+.content-admin nav a {
+  color: #fff;
+}
+
+.content-admin nav a.active {
+  font-weight: bold;
+}
+
+
+/* CHEFS */
+
+.content-admin main .chefs-detail {
+  display: grid;
+  margin: 0;
+}
+
+.content-admin main .chefs-detail img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.content-admin main .chefs-detail h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.content-admin main .chefs-detail h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #777;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.content-admin main .chefs-detail .chefs-recipes h2 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #111;
+  margin-top: 50px;
+}
+
+.content-admin main .chefs-detail .chefs-recipes .cards {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.content-admin main .chefs-detail .chefs-recipes .card {
+  width: 100%;
+  margin: 0;
+}
+
+.content-admin main .chefs-detail .chefs-recipes .card div:nth-child(2) {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.content-admin main .chefs-detail .chefs-recipes .card img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.content-admin main .chefs-detail .chefs-recipes .card h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 21px;
+  color: #111;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.content-admin main .chefs-detail .chefs-recipes .card h2 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #777777;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.content-admin .chefs-detail .chefs-recipes .card a {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #6558C3;
+  margin: 0;
+}
+
+.content-admin main .chefs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
+
+}
+
+.content-admin main .chefs .card {
+  grid: 1fr / 74px 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-admin main .chefs .card div:nth-child(1) {
+  justify-self: center;
+  align-self: center;
+}
+
+.content-admin main .chefs .card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.content-admin main .chefs .card h1 {
+  font-size: 18px;
+  line-height: 21px;
+  color: #111;
+  font-weight: normal;
+}
+
+.content-admin main .chefs .card a {
+font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #6558C3;
+  font-weight: bold;
 }
