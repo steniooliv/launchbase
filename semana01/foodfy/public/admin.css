@@ -49,6 +49,7 @@
   border-radius: 4px;
   outline: none;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .content-admin main .recipes .header button.delete-button {
@@ -248,12 +249,12 @@
 .content-admin main .chefs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 0;
-
+  row-gap: 30px;
+  column-gap: 10px;
 }
 
 .content-admin main .chefs .card {
-  grid: 1fr / 74px 1fr;
+  grid: 1fr / 64px 1fr;
   align-items: center;
   justify-content: center;
 }
@@ -261,6 +262,10 @@
 .content-admin main .chefs .card div:nth-child(1) {
   justify-self: center;
   align-self: center;
+}
+
+.content-admin main .chefs .card div:nth-child(2) {
+  margin-left: 20px;
 }
 
 .content-admin main .chefs .card img {
@@ -278,7 +283,7 @@
 }
 
 .content-admin main .chefs .card a {
-font-size: 14px;
+  font-size: 14px;
   line-height: 16px;
   text-decoration: none;
   color: #6558C3;
