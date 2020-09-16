@@ -1,12 +1,24 @@
+const AdminRecipe = require("../models/AdminRecipe");
 
+module.exports = {
+  
+  index(req, res) {
+    AdminRecipe.all(function(recipes) {
+      return res.render("admin/recipes/index", {recipes});
+    });
+  },
 
-exports.index = function(req, res) {
-  // for (recipe of data.recipes) {
-  //   recipe.id = data.recipes.indexOf(recipe);
-  // }
-
-  return res.render("admin/recipes/index");
 }
+
+
+
+// exports.index = function(req, res) {
+//   // for (recipe of data.recipes) {
+//   //   recipe.id = data.recipes.indexOf(recipe);
+//   // }
+
+//   return res.render("admin/recipes/index");
+// }
 
 exports.show = function(req, res) {
   
