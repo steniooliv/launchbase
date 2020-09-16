@@ -6,15 +6,12 @@
 
   <div class="cards">
 
-    {% for item in data %}
+    <div class="card">
+      <img src="/asinhas.png" alt="{{item.title}}">
+      <p class="img-title">Asinhas ao Molho</p>
+      <p class="img-chef">Stenio Oliveira</p>
+    </div>
 
-      <div class="card">
-        <img src="{{item.image}}" alt="{{item.title}}">
-        <p class="img-title">{{item.title}}</p>
-        <p class="img-chef">{{item.author}}</p>
-      </div>
-
-    {% endfor %}
 
   </div> 
 
