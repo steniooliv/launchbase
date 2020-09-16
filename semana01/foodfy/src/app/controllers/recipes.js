@@ -17,3 +17,11 @@ exports.recipesIndex = function (req, res) {
   
   return res.render("recipes/details");
 }
+
+exports.search = function(req, res) {
+  return res.render("recipes/search");
+}
+
+exports.chefs = function(req, res) {
+  return res.render("recipes/chefs");
+}
