@@ -1,0 +1,34 @@
+{% extends "../layout.njk" %}
+
+{% block header %}
+
+<div class="filter">
+  <form action="/search">
+    <input type="text" name="filter" placeholder="Buscar uma receita">
+    <button type="submit">Buscar</button>
+  </form>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+ <div class="wrapper">
+   <h1>Buscando por "bacon"</h1>
+ </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="/asinhas.png" alt="Asinhas">
+      <p class="img-title">Asinhas ao Molho</p>
+      <p class="img-chef">Stenio</p>
+    </div>
+
+  </div> 
+
+</main>
+
+{% endblock %}
