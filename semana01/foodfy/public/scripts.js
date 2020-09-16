@@ -1,12 +1,15 @@
 const hide = document.querySelectorAll(".hide");
 const info = document.querySelectorAll(".info");
 const card = document.querySelectorAll(".card");
+const currentPage = location.pathname;
+const menuItems = document.querySelectorAll(".content header nav a");
 
-
-for (let i = 0; i < card.length; i++) {
-  card[i].addEventListener("click", function() {
-    window.location.href = `/recipes/${i}`;
-  })
+if (menuItems) {
+  for (item of menuItems) {
+    if (currentPage.includes(item.getAttribute("href"))) {
+      item.classList.add("active");
+    }
+  }
 }
 
 for (let i = 0; i < hide.length; i++) {
