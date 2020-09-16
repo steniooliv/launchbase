@@ -8,13 +8,13 @@
 
     <div class="header">
       <h1>Chef: {{chef.name}}</h1>
-      <button type="submit" onclick="window.location.href='/admin/chefs/{{chefs.id}}/edit'">Editar Chef</button>
+      <button type="submit" onclick="window.location.href='/admin/chefs/{{chef.id}}/edit'">Editar Chef</button>
     </div>
 
     <div class="chefs-detail">
       <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
       <h1>{{chef.name}}</h1>
-      <h3>4 Receitas</h2>
+      <h3>{{totalRecipes}} Receitas</h2>
 
       <div class="chefs-recipes">
             
@@ -26,12 +26,12 @@
 
             <div class="card">
               <div>
-                <img src="{{recipe.image}}" alt="{[recipe.name}}" srcset="">
+                <img src="{{recipe.image}}" alt="{[recipe.title}}" srcset="">
               </div>
               <div>
-                <h1>{{recipe.name}}</h1>
+                <h1>{{recipe.title}}</h1>
                 <h2>por {{chef.name}}</h2>
-                <a href="/admin/recipes/{{recipes.id}}" class="link">Visualizar</a>
+                <a href="/admin/recipes/{{recipe.id}}" class="link">Visualizar</a>
               </div>
             </div>
 
