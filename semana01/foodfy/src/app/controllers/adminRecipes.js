@@ -11,15 +11,6 @@ module.exports = {
 }
 
 
-
-// exports.index = function(req, res) {
-//   // for (recipe of data.recipes) {
-//   //   recipe.id = data.recipes.indexOf(recipe);
-//   // }
-
-//   return res.render("admin/recipes/index");
-// }
-
 exports.show = function(req, res) {
   
   // for (recipe of data.recipes) {
