@@ -1,4 +1,3 @@
-const currentPage = location.pathname;
 const menuItems = document.querySelectorAll(".content-admin header nav a");
 
 const formDelete = document.querySelector("#form-delete");
@@ -6,7 +5,12 @@ const formDelete = document.querySelector("#form-delete");
 const ingredients = document.querySelector(".ingredients");
 const preparations = document.querySelector(".preparations");
 
+const hide = document.querySelectorAll(".hide");
+
+
 if (menuItems) {
+  const currentPage = location.pathname;
+  
   for (item of menuItems) {
     if (currentPage.includes(item.getAttribute("href"))) {
       item.classList.add("active");
@@ -55,3 +59,19 @@ if (preparations) {
   document.querySelector(".add-prepare").addEventListener("click",addPreparation);
 }
 
+if (hide) {
+  const info = document.querySelectorAll(".info");
+
+  for (let i = 0; i < hide.length; i++) {
+    hide[i].addEventListener("click", function() {
+      if (hide[i].textContent == "Esconder") {
+        hide[i].textContent = "Mostrar";
+        info[i].classList.add("off");
+      }
+      else {
+        hide[i].textContent = "Esconder";
+        info[i].classList.remove("off");
+      }
+    })
+  }
+}
