@@ -267,7 +267,7 @@ footer p {
 
 .recipes-detail ul {
   margin-bottom: 40px;
-
+  list-style-type: none;
 }
 
 .recipes-detail li {
