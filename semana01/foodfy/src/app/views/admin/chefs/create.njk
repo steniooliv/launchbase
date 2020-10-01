@@ -4,37 +4,35 @@
 
 <main>
 
-<div class="recipes">
+  <div class="recipes">
 
     <div class="header">
       <h1>Criando Chef</h1>
 
-  <form action="/admin/chefs" method="POST">
-      
-      <button type="submit">Salvar Chef</button>
+      <button form="create-chef" type="submit">Salvar Chef</button>
     </div>
 
     <div class="recipes">
-      
-      <div class="item">
-        <div>Nome</div>
-        <div>
-          <input type="text" name="name" value="{{chef.name}}">
+      <form id="create-chef" action="/admin/chefs" method="POST">
+        
+        <div class="item">
+          <div>Nome</div>
+          <div>
+            <input type="text" name="name" value="{{chef.name}}">
+          </div>
         </div>
-      </div>
 
-      <div class="item">
-        <div>Avatar</div>
-        <div>
-          <input type="url" name="avatar_url" value="{{chef.avatar_url}}">
+        <div class="item">
+          <div>Avatar</div>
+          <div>
+            <input type="url" name="avatar_url" value="{{chef.avatar_url}}">
+          </div>
         </div>
-      </div>
 
+      </form>
     </div>
 
-  </form>
-
-</div>
+  </div>
 
 </main>
 

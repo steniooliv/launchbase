@@ -4,23 +4,23 @@
 
 <main>
 
-<div class="recipes">
+  <div class="recipes">
 
     <div class="header">
       <h1>Criar receitas</h1>
 
-  <form action="/admin/recipes" method="POST">
+      <button form="create-recipes" type="submit">Salvar receita</button>
+    </div>
+    
+    <form id="create-recipes" action="/admin/recipes" method="POST">
       
-      <button type="submit">Salvar receita</button>
-    </div>
+      <div class="recipes">
+        {% include "./fields.njk" %}
+      </div>
 
-    <div class="recipes">
-      {% include "./fields.njk" %}
-    </div>
+    </form>
 
-  </form>
-
-</div>
+  </div>
 
 </main>
 
