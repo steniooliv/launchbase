@@ -34,6 +34,31 @@ module.exports = {
     AdminRecipe.post(req.body, function(recipe) {
       return res.redirect(`/admin/recipes/${recipe.id}`);
     });
+  },
+
+  edit(req, res) {
+    AdminRecipe.find(req.params.id, function(recipes) {
+      if (!recipes) return res.send("Recipe not found!");
+
+      AdminRecipe.chefSelectOption(function(options) {
+
+        return res.render("admin/recipes/edit", {recipes, chefOptions: options});
+      })
+    })
+  },
+
+  put(req, res) {
+    const keys = Object.keys(req.body);
+
+    for (key of keys) {
+      if (req.body[key] == "") {
+        return res.send("Fill all fields!");
+      }
+    }
+
+    AdminRecipe.update(req.body, function(recipe) {
+      return res.redirect(`/admin/recipes/${recipe.id}`);
+    })
   }
 
 
